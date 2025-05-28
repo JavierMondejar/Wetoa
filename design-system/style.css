@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #324A6D; /* color texto base */
+  background-color: #F3F5F8; /* color fondo claro */
+}
+
+h1, h2, h3 {
+  color: #1C244B; /* color títulos */
+  font-weight: 600;
+}
+
+a.button-primary {
+  background-color: #EFD048;
+  color: #1C244B;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
