@@ -1,0 +1,25 @@
+{
+  "colors": {
+    "primary": "#1C244B",
+    "secondary": "#F3F5F8",
+    "text": "#324A6D",
+    "accent": "#EFD048",
+    "error": "#D53A3A",
+    "cta": "#467FF7",
+    "titleBlue": "#1C244B",
+    "textBlue": "#324A6D",
+    "lightBackground": "#DFF0FF",
+    "white": "#FFFFFF",
+    "black": "#343434"
+  },
+  "typography": {
+    "fontFamily": "Poppins",
+    "headingSize": "35px",
+    "textSize": "30px",
+    "fontWeightHeading": "600",
+    "fontWeightText": "300"
+  },
+  "border": {
+    "radius": "30px"
+  }
+}
