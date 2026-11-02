@@ -4,6 +4,7 @@
 import { readJSON, writeJSON, parseArgs, downloadBinary, normalizarNombrePlaya, campo, haversine } from './utils.mjs';
 import fs from 'fs';
 import { read as readShapefile } from 'shapefile';
+import AdmZip from 'adm-zip';
 
 // URL de descarga del censo (formato SHP comprimido)
 const CENSO_URL = 'https://www.miteco.gob.es/fr/cartografia-y-sig/ide/descargas/agua/censo-aguas-bano.html';
@@ -11,35 +12,72 @@ const CENSO_URL = 'https://www.miteco.gob.es/fr/cartografia-y-sig/ide/descargas/
 const CENSO_DOWNLOAD_URL = 'https://www.miteco.gob.es/content/dam/miteco/es/cartografia-y-sig/ide/descargas/01-agua/censo_zonas_bano.zip';
 
 /**
- * Descarga y convierte el Censo de Aguas de Baño desde MITECO
+ * Descarga y extrae el Censo de Aguas de Baño desde MITECO
  */
 async function descargarCenso() {
   console.log('\nDescargando Censo de Zonas de Aguas de Baño...');
-  console.log(`  Intentando descarga desde: ${CENSO_DOWNLOAD_URL}`);
+  console.log(`  Descargando desde: ${CENSO_DOWNLOAD_URL}`);
   
   try {
-    // Intentar descargar el ZIP
+    // Descargar el ZIP
     const zipBuffer = await downloadBinary(CENSO_DOWNLOAD_URL);
     console.log(`  ✓ Descargado ZIP (${zipBuffer.length} bytes)`);
     
-    // Guardar temporalmente
-    const zipPath = '/tmp/censo_zonas_bano.zip';
-    fs.writeFileSync(zipPath, zipBuffer);
+    // Extraer ZIP
+    const zip = new AdmZip(zipBuffer);
+    const zipEntries = zip.getEntries();
     
-    // Extraer y convertir SHP a GeoJSON usando biblioteca shapefile
-    const shpPath = '/tmp/censo_zonas_bano.shp'; // Ajustar según nombre real
+    // Buscar archivo .shp
+    const shpEntry = zipEntries.find(e => e.entryName.endsWith('.shp'));
+    const dbfEntry = zipEntries.find(e => e.entryName.endsWith('.dbf'));
     
-    // Nota: Para simplificar, intentamos leer directamente si el ZIP contiene un SHP
-    // En producción, deberíamos usar unzipper o similar
-    console.log('  ⚠️  Conversión SHP→GeoJSON requiere extracción del ZIP');
-    console.log('  Por ahora retornando dataset vacío (implementar con unzipper si es necesario)');
+    if (!shpEntry || !dbfEntry) {
+      console.log('  ⚠️  No se encontró archivo .shp o .dbf en el ZIP');
+      return [];
+    }
     
-    return [];
+    console.log(`  ✓ Encontrado: ${shpEntry.entryName}`);
+    
+    // Extraer a temp
+    const tmpDir = '/tmp/censo_aguas';
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir, { recursive: true });
+    }
+    zip.extractAllTo(tmpDir, true);
+    
+    const shpPath = `${tmpDir}/${shpEntry.entryName}`;
+    console.log(`  Convirtiendo SHP a GeoJSON...`);
+    
+    // Leer shapefile y convertir a array de features
+    const features = [];
+    const source = await readShapefile(shpPath);
+    
+    let result;
+    while (!(result = await source.read()).done) {
+      features.push(result.value);
+    }
+    
+    console.log(`  ✓ ${features.length} zonas de baño en el censo`);
+    
+    // Filtrar solo provincia de Alicante
+    const alicante = features.filter(f => {
+      const props = f.properties || {};
+      return props.provincia && props.provincia.toLowerCase().includes('alicante');
+    });
+    
+    console.log(`  ✓ ${alicante.length} zonas en Alicante`);
+    
+    // Convertir a formato simple
+    return alicante.map(f => ({
+      nombre: f.properties.nombre || f.properties.name || f.properties.NOMBRE,
+      codigo: f.properties.codigo || f.properties.id,
+      tipo: f.properties.tipo || 'Playa',
+      lat: f.geometry && f.geometry.coordinates ? f.geometry.coordinates[1] : null,
+      lng: f.geometry && f.geometry.coordinates ? f.geometry.coordinates[0] : null
+    }));
     
   } catch (error) {
     console.error(`  [ERROR] ${error.message}`);
-    console.log('  ⚠️  No se pudo descargar automáticamente');
-    console.log('  Alternativa: Descargar manualmente y colocar GeoJSON en data/raw/');
     return [];
   }
 }

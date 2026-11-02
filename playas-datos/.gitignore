@@ -1,0 +1,8 @@
+data/raw/
+cache/
+*.zip
+*.shp
+*.dbf
+*.shx
+*.prj
+node_modules/

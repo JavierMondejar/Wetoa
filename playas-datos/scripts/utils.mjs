@@ -54,7 +54,8 @@ export function download(url, options = {}) {
       res.on('end', () => resolve(data));
     });
     req.on('error', reject);
-    req.setTimeout(30000, () => {
+    // Aumentar timeout a 120s para Overpass y otros servicios lentos
+    req.setTimeout(120000, () => {
       req.destroy();
       reject(new Error(`Timeout downloading ${url}`));
     });

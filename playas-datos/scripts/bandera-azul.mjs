@@ -7,100 +7,69 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const pdfParse = require('pdf-parse');
 
-// URL de ADEAC (Asociación de Educación Ambiental y del Consumidor)
+// URL de ADEAC y fuente periodística con listado 2026
 const BANDERA_AZUL_URL = 'https://www.banderaazul.org';
-// Intentar URL directa al PDF más reciente (actualizar año según disponibilidad)
-const BANDERA_AZUL_PDF_2025 = 'https://www.banderaazul.org/sites/default/files/playas_2025.pdf';
-const BANDERA_AZUL_PDF_2024 = 'https://www.adeac.es/sites/default/files/playas_bandera_azul_2024.pdf';
+const VALENCIA_BONITA_2026_URL = 'https://www.valenciabonita.es/2026/05/05/banderas-azules-comunitat-valenciana-2026/';
 
 /**
- * Descarga y parsea el PDF de Banderas Azules
+ * Descarga listado 2026 desde artículo de prensa (Valencia Bonita)
  */
 async function descargarBanderasAzules() {
-  console.log('\nDescargando listado de Banderas Azules...');
+  console.log('\nDescargando listado de Banderas Azules 2026...');
+  console.log(`  Fuente: ${VALENCIA_BONITA_2026_URL}`);
   
-  // Intentar años más recientes primero
-  const urls = [
-    { url: BANDERA_AZUL_PDF_2025, year: 2025 },
-    { url: BANDERA_AZUL_PDF_2024, year: 2024 }
-  ];
-  
-  for (const { url, year } of urls) {
-    try {
-      console.log(`  Intentando descargar PDF ${year}: ${url}`);
-      const pdfBuffer = await downloadBinary(url);
-      console.log(`  ✓ Descargado PDF (${pdfBuffer.length} bytes)`);
-      
-      // Parsear PDF
-      const pdfData = await pdfParse(pdfBuffer);
-      console.log(`  ✓ PDF parseado (${pdfData.numpages} páginas)`);
-      
-      // Extraer playas de Alicante del texto
-      const playasAlicante = extraerPlayasAlicantePDF(pdfData.text, year);
-      console.log(`  ✓ ${playasAlicante.length} playas con Bandera Azul en Alicante (${year})`);
-      
-      return playasAlicante;
-      
-    } catch (error) {
-      console.log(`  [WARN] No se pudo descargar PDF ${year}: ${error.message}`);
-      continue;
-    }
-  }
-  
-  console.log('  ⚠️  No se pudo descargar ningún PDF de Bandera Azul');
-  
-  // Fallback: usar archivo local si existe
   try {
-    if (fs.existsSync('data/raw/bandera-azul-2024-alicante.json')) {
-      console.log('  Usando datos de referencia locales (data/raw/bandera-azul-2024-alicante.json)');
-      const localData = readJSON('data/raw/bandera-azul-2024-alicante.json');
-      return localData;
-    }
-  } catch (e) {}
-  
-  return [];
+    const html = await download(VALENCIA_BONITA_2026_URL);
+    const playasAlicante = extraerPlayasHTML(html);
+    console.log(`  ✓ ${playasAlicante.length} playas con Bandera Azul 2026 en Alicante`);
+    return playasAlicante;
+  } catch (error) {
+    console.error(`  [ERROR] No se pudo descargar artículo: ${error.message}`);
+    return [];
+  }
 }
 
 /**
- * Extrae playas de Alicante del texto del PDF
+ * Extrae playas de Alicante del HTML del artículo
  */
-function extraerPlayasAlicantePDF(text, year) {
+function extraerPlayasHTML(html) {
   const playas = [];
-  const lines = text.split('\n');
   
-  let enSeccionAlicante = false;
+  // Buscar sección de Alicante en el HTML
+  const alicanteSectionMatch = html.match(/ALICANTE[\s\S]*?(?=CASTELLÓN|$)/i);
+  if (!alicanteSectionMatch) {
+    console.log('  [WARN] No se encontró sección de Alicante en el artículo');
+    return [];
+  }
   
-  for (const line of lines) {
-    const lineTrim = line.trim();
+  const alicateSection = alicanteSectionMatch[0];
+  
+  // Extraer líneas con nombres de playas (típicamente en <li> o <p>)
+  const playaMatches = alicateSection.match(/<li[^>]*>([^<]+)<\/li>|<p[^>]*>([^<]+)<\/p>/gi) || [];
+  
+  for (const match of playaMatches) {
+    // Quitar tags HTML
+    let texto = match.replace(/<[^>]+>/g, '').trim();
     
-    // Detectar inicio de sección Alicante
-    if (lineTrim.match(/alicante/i) && !lineTrim.match(/valencia|castellón|murcia/i)) {
-      enSeccionAlicante = true;
-      continue;
-    }
-    
-    // Detectar fin de sección (siguiente provincia)
-    if (enSeccionAlicante && lineTrim.match(/^(barcelona|tarragona|girona|valencia|castellón|murcia|almería|granada|málaga)/i)) {
-      enSeccionAlicante = false;
-    }
-    
-    // Extraer playas en sección Alicante
-    if (enSeccionAlicante && lineTrim.length > 3) {
-      // Filtrar líneas que parecen nombres de playas
-      if (lineTrim.match(/playa|platja|cala|beach/i)) {
-        // Limpiar y normalizar
-        let nombre = lineTrim
-          .replace(/^\d+[\.\-\s]*/,' ') // Quitar números al inicio
-          .replace(/\s+/g, ' ')
-          .trim();
-        
-        if (nombre.length > 5 && nombre.length < 100) {
-          playas.push({
-            nombre,
-            year,
-            municipio: null // Extraer si está en el PDF
-          });
-        }
+    // Filtrar solo líneas que parecen nombres de playas
+    if (texto.match(/playa|platja|cala/i) && texto.length > 5 && texto.length < 150) {
+      // Extraer municipio si está entre paréntesis
+      const municipioMatch = texto.match(/\(([^)]+)\)/);
+      const municipio = municipioMatch ? municipioMatch[1].trim() : null;
+      
+      // Limpiar nombre
+      let nombre = texto
+        .replace(/\([^)]+\)/g, '') // Quitar municipio entre paréntesis
+        .replace(/^\d+[\.\-\s]*/, '') // Quitar números al inicio
+        .replace(/\s+/g, ' ')
+        .trim();
+      
+      if (nombre) {
+        playas.push({
+          nombre,
+          municipio,
+          year: 2026
+        });
       }
     }
   }
@@ -170,18 +139,18 @@ function procesarPlaya(playa, listado) {
   }
   
   const tiene = result !== false;
-  const year = result || 2024;
+  const year = result || 2026;
   
   console.log(`  ${tiene ? '✓' : '✗'} Bandera Azul ${year}: ${tiene ? 'SÍ' : 'NO'}`);
   
-  const fuente = `ADEAC - Bandera Azul ${year}`;
-  const url = BANDERA_AZUL_URL;
+  const fuente = `Valencia Bonita (prensa) - Bandera Azul ${year}`;
+  const url = VALENCIA_BONITA_2026_URL;
   
   return {
     slug: playa.slug,
     nombre: playa.nombre,
     municipio: playa.municipio,
-    bandera_azul_2026: campo(tiene, fuente, url, 'dataset')
+    bandera_azul_2026: campo(tiene, fuente, url, 'dataset', 'media') // Confianza media (fuente periodística)
   };
 }
 

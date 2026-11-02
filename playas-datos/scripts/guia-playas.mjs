@@ -61,16 +61,6 @@ async function descargarGuiaPlayas() {
     
   } catch (error) {
     console.error(`  [ERROR] ${error.message}`);
-    
-    // Fallback: usar archivo local si existe
-    try {
-      if (fs.existsSync('data/raw/guia-playas-alicante-sample.json')) {
-        console.log('  Usando datos de referencia locales (data/raw/guia-playas-alicante-sample.json)');
-        const localData = readJSON('data/raw/guia-playas-alicante-sample.json');
-        return localData;
-      }
-    } catch (e) {}
-    
     return [];
   }
 }
@@ -216,13 +206,7 @@ async function main() {
   }
   
   // Descargar dataset
-  let dataset = await descargarGuiaPlayas();
-  
-  // Si el dataset está vacío y existe archivo local, usarlo
-  if (dataset.length === 0 && fs.existsSync('data/raw/guia-playas-alicante-sample.json')) {
-    console.log('\n⚠️  Dataset vacío, usando datos de referencia locales');
-    dataset = readJSON('data/raw/guia-playas-alicante-sample.json');
-  }
+  const dataset = await descargarGuiaPlayas();
   
   const results = [];
   for (const beach of toProcess) {

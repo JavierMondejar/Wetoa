@@ -70,16 +70,14 @@ async function buscarServiciosCercanos(playa, lat, lng) {
     return null;
   }
   
-  const radio = 500; // metros
+  const radio = 300; // metros (reducido para queries más rápidas)
   
   // Query Overpass para servicios relevantes
   const query = `
-    [out:json][timeout:25];
+    [out:json][timeout:90];
     (
       node["amenity"="parking"](around:${radio},${lat},${lng});
       node["amenity"="toilets"](around:${radio},${lat},${lng});
-      node["leisure"="beach_resort"](around:${radio},${lat},${lng});
-      node["tourism"="information"](around:${radio},${lat},${lng});
       node["highway"="bus_stop"](around:${radio},${lat},${lng});
     );
     out body;

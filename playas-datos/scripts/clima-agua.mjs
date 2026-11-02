@@ -28,14 +28,14 @@ async function obtenerTemperaturaAgua(lat, lng) {
   const start = startDate.toISOString().split('T')[0];
   const end = endDate.toISOString().split('T')[0];
   
-  // Usar hourly para ocean_temperature (más preciso que daily)
-  const url = `${OPEN_METEO_MARINE_URL}?latitude=${lat}&longitude=${lng}&hourly=ocean_temperature&start_date=${start}&end_date=${end}`;
+  // Usar hourly para sea_surface_temperature
+  const url = `${OPEN_METEO_MARINE_URL}?latitude=${lat}&longitude=${lng}&hourly=sea_surface_temperature&start_date=${start}&end_date=${end}`;
   
   try {
     const response = await download(url);
     const data = JSON.parse(response);
     
-    if (!data.hourly || !data.hourly.ocean_temperature) {
+    if (!data.hourly || !data.hourly.sea_surface_temperature) {
       console.log('    No hay datos de temperatura disponibles para esta ubicación');
       return null;
     }
@@ -43,7 +43,7 @@ async function obtenerTemperaturaAgua(lat, lng) {
     // Calcular promedios mensuales desde datos horarios
     const meses = {};
     for (let i = 0; i < data.hourly.time.length; i++) {
-      const temp = data.hourly.ocean_temperature[i];
+      const temp = data.hourly.sea_surface_temperature[i];
       if (temp === null || temp === undefined) {
         continue;
       }
