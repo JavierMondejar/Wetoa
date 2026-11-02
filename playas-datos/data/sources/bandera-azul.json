@@ -4,12 +4,8 @@
     "nombre": "Playa del Postiguet · Postiguet Beach",
     "municipio": "Alicante",
     "bandera_azul_2026": {
-      "valor": true,
-      "fuente": "ADEAC - Bandera Azul 2024",
-      "url": "https://www.banderaazul.org",
-      "fecha": "2026-11-02",
-      "metodo": "dataset",
-      "confianza": "alta"
+      "valor": null,
+      "estado": "por confirmar"
     }
   },
   {
@@ -17,12 +13,8 @@
     "nombre": "Playa de San Juan · San Juan Beach",
     "municipio": "Alicante",
     "bandera_azul_2026": {
-      "valor": true,
-      "fuente": "ADEAC - Bandera Azul 2024",
-      "url": "https://www.banderaazul.org",
-      "fecha": "2026-11-02",
-      "metodo": "dataset",
-      "confianza": "alta"
+      "valor": null,
+      "estado": "por confirmar"
     }
   }
 ]
