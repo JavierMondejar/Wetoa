@@ -1,0 +1,98 @@
+{
+  "slug": "playa-del-espigo",
+  "nombre": "Playa del Espigó · Espigó Beach",
+  "municipio": "Altea",
+  "tipo": "ficha",
+  "urls": {
+    "es": "https://welcometoalicante.info/es/altea/playas/playa-del-espigo/",
+    "en": "https://welcometoalicante.info/altea/beaches/espigo-beach/"
+  },
+  "keyword_principal": "ES: playa del espigo · EN: espigo beach",
+  "notion_id": "40ce94a5-5148-811f-a8c4-e3aa0272fd5d",
+  "coordenadas": {
+    "lat": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "lng": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "dimensiones": {
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "caracteristicas": {
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "censo_aguas_bano": {
+    "codigo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "calidad_agua": {
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "bandera_azul_2026": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "servicios": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "temperatura_agua": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "playas_cercanas": {
+    "valor": null,
+    "estado": "por confirmar"
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "playa-del-espigo",
+    "nombre": "Playa del Espigó · Espigó Beach",
+    "servicios": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-postiguet",
+    "nombre": "Playa del Postiguet · Postiguet Beach",
+    "servicios": {
+      "valor": {
+        "parkings": [],
+        "aseos": [],
+        "paradas_bus": []
+      },
+      "fuente": "OpenStreetMap via Overpass API",
+      "url": "https://www.openstreetmap.org/?mlat=38.3462031&mlon=-0.4763094&zoom=16",
+      "fecha": "2026-11-02",
+      "metodo": "api",
+      "confianza": "media"
+    }
+  },
+  {
+    "slug": "cala-del-mascarat",
+    "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+    "servicios": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-san-juan",
+    "nombre": "Playa de San Juan · San Juan Beach",
+    "servicios": {
+      "valor": {
+        "parkings": [],
+        "aseos": [],
+        "paradas_bus": []
+      },
+      "fuente": "OpenStreetMap via Overpass API",
+      "url": "https://www.openstreetmap.org/?mlat=38.3703033&mlon=-0.4097663&zoom=16",
+      "fecha": "2026-11-02",
+      "metodo": "api",
+      "confianza": "media"
+    }
+  },
+  {
+    "slug": "playa-de-la-solsida",
+    "nombre": "Playa de la Solsida · La Solsida Beach",
+    "servicios": {
+      "valor": {
+        "parkings": [],
+        "aseos": [],
+        "paradas_bus": []
+      },
+      "fuente": "OpenStreetMap via Overpass API",
+      "url": "https://www.openstreetmap.org/?mlat=38.6268841&mlon=-0.0153897&zoom=16",
+      "fecha": "2026-11-02",
+      "metodo": "api",
+      "confianza": "media"
+    }
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "fecha_generacion": "2026-11-02",
+  "total_playas": 5,
+  "resumen_por_playa": [
+    {
+      "slug": "playa-del-espigo",
+      "nombre": "Playa del Espigó · Espigó Beach",
+      "campos_totales": 19,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-postiguet",
+      "nombre": "Playa del Postiguet · Postiguet Beach",
+      "campos_totales": 19,
+      "campos_completos": 4,
+      "completitud_porcentaje": 21
+    },
+    {
+      "slug": "cala-del-mascarat",
+      "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+      "campos_totales": 19,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-san-juan",
+      "nombre": "Playa de San Juan · San Juan Beach",
+      "campos_totales": 19,
+      "campos_completos": 4,
+      "completitud_porcentaje": 21
+    },
+    {
+      "slug": "playa-de-la-solsida",
+      "nombre": "Playa de la Solsida · La Solsida Beach",
+      "campos_totales": 19,
+      "campos_completos": 4,
+      "completitud_porcentaje": 21
+    }
+  ],
+  "resumen_por_fuente": {
+    "coordenadas": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 60
+    },
+    "guia-playas": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "censo-aguas-bano": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "calidad-agua": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "bandera-azul": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "osm-servicios": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 60
+    },
+    "clima-agua": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "cercanas": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 60
+    }
+  }
+}

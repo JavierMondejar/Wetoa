@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "playa-del-espigo",
+    "nombre": "Playa del Espigó · Espigó Beach",
+    "municipio": "Altea",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-postiguet",
+    "nombre": "Playa del Postiguet · Postiguet Beach",
+    "municipio": "Alicante",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-mascarat",
+    "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+    "municipio": "Altea",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-san-juan",
+    "nombre": "Playa de San Juan · San Juan Beach",
+    "municipio": "Alicante",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-solsida",
+    "nombre": "Playa de la Solsida · La Solsida Beach",
+    "municipio": "Altea",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  }
+]

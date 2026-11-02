@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "playa-del-espigo",
+    "nombre": "Playa del Espigó · Espigó Beach",
+    "playas_cercanas": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-postiguet",
+    "nombre": "Playa del Postiguet · Postiguet Beach",
+    "playas_cercanas": {
+      "valor": [
+        {
+          "slug": "playa-de-san-juan",
+          "nombre": "Playa de San Juan · San Juan Beach",
+          "municipio": "Alicante",
+          "distancia_km": 6.39,
+          "lat": 38.3703033,
+          "lng": -0.4097663
+        },
+        {
+          "slug": "playa-de-la-solsida",
+          "nombre": "Playa de la Solsida · La Solsida Beach",
+          "municipio": "Altea",
+          "distancia_km": 50.83,
+          "lat": 38.6268841,
+          "lng": -0.0153897
+        }
+      ],
+      "fuente": "Cálculo haversine",
+      "url": null,
+      "fecha": "2026-11-02",
+      "metodo": "calculo",
+      "confianza": "alta"
+    }
+  },
+  {
+    "slug": "cala-del-mascarat",
+    "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+    "playas_cercanas": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-san-juan",
+    "nombre": "Playa de San Juan · San Juan Beach",
+    "playas_cercanas": {
+      "valor": [
+        {
+          "slug": "playa-del-postiguet",
+          "nombre": "Playa del Postiguet · Postiguet Beach",
+          "municipio": "Alicante",
+          "distancia_km": 6.39,
+          "lat": 38.3462031,
+          "lng": -0.4763094
+        },
+        {
+          "slug": "playa-de-la-solsida",
+          "nombre": "Playa de la Solsida · La Solsida Beach",
+          "municipio": "Altea",
+          "distancia_km": 44.63,
+          "lat": 38.6268841,
+          "lng": -0.0153897
+        }
+      ],
+      "fuente": "Cálculo haversine",
+      "url": null,
+      "fecha": "2026-11-02",
+      "metodo": "calculo",
+      "confianza": "alta"
+    }
+  },
+  {
+    "slug": "playa-de-la-solsida",
+    "nombre": "Playa de la Solsida · La Solsida Beach",
+    "playas_cercanas": {
+      "valor": [
+        {
+          "slug": "playa-de-san-juan",
+          "nombre": "Playa de San Juan · San Juan Beach",
+          "municipio": "Alicante",
+          "distancia_km": 44.63,
+          "lat": 38.3703033,
+          "lng": -0.4097663
+        },
+        {
+          "slug": "playa-del-postiguet",
+          "nombre": "Playa del Postiguet · Postiguet Beach",
+          "municipio": "Alicante",
+          "distancia_km": 50.83,
+          "lat": 38.3462031,
+          "lng": -0.4763094
+        }
+      ],
+      "fuente": "Cálculo haversine",
+      "url": null,
+      "fecha": "2026-11-02",
+      "metodo": "calculo",
+      "confianza": "alta"
+    }
+  }
+]
