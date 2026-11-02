@@ -2,35 +2,112 @@
 // Descarga y procesa datos de la Guía de Playas de España (MITECO)
 
 import { readJSON, writeJSON, parseArgs, download, normalizarNombrePlaya, campo, hoy } from './utils.mjs';
+import fs from 'fs';
 
-// URL del dataset en datos.gob.es
-// Nota: Verificar la URL actual y formato del archivo (puede ser CSV, JSON, o necesitar descarga de ZIP)
-const GUIA_PLAYAS_URL = 'https://datos.gob.es/en/catalogo/e0dat0002-guia-de-playas-de-espana';
+// URL del dataset en datos.gob.es (CKAN API)
+const GUIA_PLAYAS_DATASET_ID = 'e0dat0002-guia-de-playas-de-espana';
+const CKAN_API_URL = 'https://datos.gob.es/apidata/catalog/dataset';
+const GUIA_PLAYAS_URL = `${CKAN_API_URL}/${GUIA_PLAYAS_DATASET_ID}`;
 
 /**
- * Descarga la Guía de Playas
- * NOTA: La URL real del archivo debe verificarse manualmente en datos.gob.es
- * El dataset puede estar en varios formatos (CSV, XLS, JSON)
+ * Descarga la Guía de Playas desde datos.gob.es usando CKAN API
  */
 async function descargarGuiaPlayas() {
-  console.log('\nDescargando Guía de Playas de España...');
-  console.log('NOTA: Esta URL debe verificarse manualmente en datos.gob.es');
-  console.log(`URL del catálogo: ${GUIA_PLAYAS_URL}`);
-  
-  // Por ahora, simulamos la estructura esperada basada en la documentación típica de MITECO
-  // En una implementación real, aquí descargaríamos el CSV/JSON desde la URL directa
+  console.log('\nDescargando Guía de Playas de España desde datos.gob.es...');
   
   try {
-    // Intentar descargar desde posible URL directa
-    // const data = await download('URL_DIRECTA_AL_CSV');
-    // return parsearCSV(data);
+    // 1. Obtener metadata del dataset para encontrar URL de descarga
+    const metadataUrl = `${CKAN_API_URL}/${GUIA_PLAYAS_DATASET_ID}`;
+    console.log(`  Consultando metadata: ${metadataUrl}`);
     
-    console.log('⚠️  Descarga no implementada: verificar formato y URL exacta en datos.gob.es');
-    return [];
+    const metadataResponse = await download(metadataUrl);
+    const metadata = JSON.parse(metadataResponse);
+    
+    // 2. Buscar recurso CSV o JSON
+    if (!metadata.result || !metadata.result.distribution) {
+      console.log('  ⚠️  No se encontraron distribuciones del dataset');
+      return [];
+    }
+    
+    const distributions = metadata.result.distribution;
+    const csvResource = distributions.find(d => 
+      d.format?.toUpperCase() === 'CSV' || 
+      d.mediaType === 'text/csv' ||
+      d.accessURL?.includes('.csv')
+    );
+    
+    if (!csvResource) {
+      console.log('  ⚠️  No se encontró recurso CSV en el dataset');
+      console.log(`  Formatos disponibles: ${distributions.map(d => d.format).join(', ')}`);
+      return [];
+    }
+    
+    const downloadUrl = csvResource.accessURL;
+    console.log(`  Descargando CSV desde: ${downloadUrl}`);
+    
+    // 3. Descargar y parsear CSV
+    const csvData = await download(downloadUrl);
+    const playas = parsearCSVGuiaPlayas(csvData);
+    
+    console.log(`  ✓ ${playas.length} playas descargadas`);
+    
+    // Filtrar solo provincia de Alicante
+    const playasAlicante = playas.filter(p => 
+      p.provincia && p.provincia.toLowerCase().includes('alicante')
+    );
+    
+    console.log(`  ✓ ${playasAlicante.length} playas de Alicante`);
+    return playasAlicante;
+    
   } catch (error) {
-    console.error(`Error descargando: ${error.message}`);
+    console.error(`  [ERROR] ${error.message}`);
+    
+    // Fallback: usar archivo local si existe
+    try {
+      if (fs.existsSync('data/raw/guia-playas-alicante-sample.json')) {
+        console.log('  Usando datos de referencia locales (data/raw/guia-playas-alicante-sample.json)');
+        const localData = readJSON('data/raw/guia-playas-alicante-sample.json');
+        return localData;
+      }
+    } catch (e) {}
+    
     return [];
   }
+}
+
+/**
+ * Parsea CSV de Guía de Playas (formato simplificado)
+ */
+function parsearCSVGuiaPlayas(csvText) {
+  const lines = csvText.split('\n').filter(l => l.trim());
+  if (lines.length === 0) return [];
+  
+  const header = lines[0].split(';').map(h => h.trim().replace(/^"|"$/g, ''));
+  const playas = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    const values = lines[i].split(';').map(v => v.trim().replace(/^"|"$/g, ''));
+    if (values.length < header.length) continue;
+    
+    const playa = {};
+    header.forEach((key, idx) => {
+      playa[key.toLowerCase().replace(/[^a-z0-9]/g, '_')] = values[idx] || null;
+    });
+    
+    playas.push(playa);
+  }
+  
+  return playas;
+}
+
+/**
+ * Limpia nombre bilingüe (toma solo parte española antes de " · ")
+ */
+function limpiarNombreBilingue(nombre) {
+  if (nombre.includes(' · ')) {
+    return nombre.split(' · ')[0].trim();
+  }
+  return nombre;
 }
 
 /**
@@ -41,14 +118,29 @@ function buscarPlaya(nombre, municipio, dataset) {
     return null;
   }
   
-  const nombreNorm = normalizarNombrePlaya(nombre);
+  const nombreLimpio = limpiarNombreBilingue(nombre);
+  const nombreNorm = normalizarNombrePlaya(nombreLimpio);
   const municipioNorm = municipio.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   
-  // Buscar coincidencia exacta
+  // Buscar coincidencia por nombre y municipio
   const match = dataset.find(p => {
-    const pNombre = normalizarNombrePlaya(p.nombre || '');
+    const pNombreLimpio = limpiarNombreBilingue(p.nombre || '');
+    const pNombre = normalizarNombrePlaya(pNombreLimpio);
     const pMunicipio = (p.municipio || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    return pNombre === nombreNorm && pMunicipio.includes(municipioNorm);
+    
+    // Match exacto de municipio y nombre
+    if (pMunicipio === municipioNorm && pNombre === nombreNorm) {
+      return true;
+    }
+    
+    // Match parcial (municipio contiene o nombre contiene)
+    if (pMunicipio.includes(municipioNorm) || municipioNorm.includes(pMunicipio)) {
+      if (pNombre === nombreNorm) {
+        return true;
+      }
+    }
+    
+    return false;
   });
   
   return match;
@@ -124,7 +216,13 @@ async function main() {
   }
   
   // Descargar dataset
-  const dataset = await descargarGuiaPlayas();
+  let dataset = await descargarGuiaPlayas();
+  
+  // Si el dataset está vacío y existe archivo local, usarlo
+  if (dataset.length === 0 && fs.existsSync('data/raw/guia-playas-alicante-sample.json')) {
+    console.log('\n⚠️  Dataset vacío, usando datos de referencia locales');
+    dataset = readJSON('data/raw/guia-playas-alicante-sample.json');
+  }
   
   const results = [];
   for (const beach of toProcess) {

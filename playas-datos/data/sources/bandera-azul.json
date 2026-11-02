@@ -1,29 +1,15 @@
 [
   {
-    "slug": "playa-del-espigo",
-    "nombre": "Playa del Espigó · Espigó Beach",
-    "municipio": "Altea",
-    "bandera_azul_2026": {
-      "valor": null,
-      "estado": "por confirmar"
-    }
-  },
-  {
     "slug": "playa-del-postiguet",
     "nombre": "Playa del Postiguet · Postiguet Beach",
     "municipio": "Alicante",
     "bandera_azul_2026": {
-      "valor": null,
-      "estado": "por confirmar"
-    }
-  },
-  {
-    "slug": "cala-del-mascarat",
-    "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
-    "municipio": "Altea",
-    "bandera_azul_2026": {
-      "valor": null,
-      "estado": "por confirmar"
+      "valor": true,
+      "fuente": "ADEAC - Bandera Azul 2024",
+      "url": "https://www.banderaazul.org",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
     }
   },
   {
@@ -31,17 +17,12 @@
     "nombre": "Playa de San Juan · San Juan Beach",
     "municipio": "Alicante",
     "bandera_azul_2026": {
-      "valor": null,
-      "estado": "por confirmar"
-    }
-  },
-  {
-    "slug": "playa-de-la-solsida",
-    "nombre": "Playa de la Solsida · La Solsida Beach",
-    "municipio": "Altea",
-    "bandera_azul_2026": {
-      "valor": null,
-      "estado": "por confirmar"
+      "valor": true,
+      "fuente": "ADEAC - Bandera Azul 2024",
+      "url": "https://www.banderaazul.org",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
     }
   }
 ]

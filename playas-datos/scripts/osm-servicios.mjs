@@ -4,12 +4,16 @@
 import { readJSON, writeJSON, parseArgs, download, sleep, campo } from './utils.mjs';
 import fs from 'fs';
 
-const OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+const OVERPASS_INSTANCES = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+  'https://overpass.private.coffee/api/interpreter'
+];
 const USER_AGENT = 'WelcomeToAlicante/1.0 (contact@welcometoalicante.info)';
 const ENABLE_OSM = process.env.ENABLE_OSM !== 'false';
 
 /**
- * Consulta Overpass API
+ * Consulta Overpass API con retry y fallback a instancias alternativas
  */
 async function queryOverpass(query) {
   if (!ENABLE_OSM) {
@@ -17,19 +21,42 @@ async function queryOverpass(query) {
     return { elements: [] };
   }
 
-  try {
-    const response = await download(
-      `${OVERPASS_URL}?data=${encodeURIComponent(query)}`,
-      { headers: { 'User-Agent': USER_AGENT } }
-    );
+  for (const instanceUrl of OVERPASS_INSTANCES) {
+    const maxRetries = 3;
     
-    await sleep(1000); // Respetar 1 req/s
-    
-    return JSON.parse(response);
-  } catch (error) {
-    console.error(`  [ERROR] Overpass: ${error.message}`);
-    return { elements: [] };
+    for (let retry = 0; retry < maxRetries; retry++) {
+      try {
+        const response = await download(
+          `${instanceUrl}?data=${encodeURIComponent(query)}`,
+          { headers: { 'User-Agent': USER_AGENT } }
+        );
+        
+        await sleep(1000); // Respetar 1 req/s
+        
+        return JSON.parse(response);
+      } catch (error) {
+        const isLastRetry = retry === maxRetries - 1;
+        const isLastInstance = instanceUrl === OVERPASS_INSTANCES[OVERPASS_INSTANCES.length - 1];
+        
+        if (isLastRetry && isLastInstance) {
+          console.error(`  [ERROR] Overpass (todas las instancias fallaron): ${error.message}`);
+          return { elements: [] };
+        }
+        
+        if (isLastRetry) {
+          console.log(`  [WARN] ${instanceUrl} falló, probando siguiente instancia...`);
+          break; // Probar siguiente instancia
+        }
+        
+        // Backoff exponencial: 2s, 4s, 8s
+        const backoffMs = Math.pow(2, retry + 1) * 1000;
+        console.log(`  [RETRY] Intento ${retry + 1}/${maxRetries}, esperando ${backoffMs}ms...`);
+        await sleep(backoffMs);
+      }
+    }
   }
+  
+  return { elements: [] };
 }
 
 /**

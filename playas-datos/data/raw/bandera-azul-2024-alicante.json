@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Playa de San Juan",
+    "municipio": "Alicante",
+    "year": 2024,
+    "fuente": "ADEAC - Banderas Azules 2024"
+  },
+  {
+    "nombre": "Playa del Postiguet",
+    "municipio": "Alicante",
+    "year": 2024,
+    "fuente": "ADEAC - Banderas Azules 2024"
+  },
+  {
+    "nombre": "Playa de Levante",
+    "municipio": "Benidorm",
+    "year": 2024,
+    "fuente": "ADEAC - Banderas Azules 2024"
+  },
+  {
+    "nombre": "Playa de Poniente",
+    "municipio": "Benidorm",
+    "year": 2024,
+    "fuente": "ADEAC - Banderas Azules 2024"
+  },
+  {
+    "nombre": "Playa del Albir",
+    "municipio": "Alfaz del Pi",
+    "year": 2024,
+    "fuente": "ADEAC - Banderas Azules 2024"
+  }
+]

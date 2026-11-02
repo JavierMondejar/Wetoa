@@ -9,6 +9,7 @@ const ENABLE_OPEN_METEO = process.env.ENABLE_OPEN_METEO !== 'false';
 
 /**
  * Consulta Open-Meteo Marine API para temperatura del agua
+ * Usa datos históricos del año pasado para calcular promedios mensuales
  */
 async function obtenerTemperaturaAgua(lat, lng) {
   if (!ENABLE_OPEN_METEO) {
@@ -16,49 +17,57 @@ async function obtenerTemperaturaAgua(lat, lng) {
     return null;
   }
 
-  // Obtener temperaturas mensuales promedio del último año
+  // Usar año completo anterior (datos históricos disponibles)
   const endDate = new Date();
-  const startDate = new Date();
-  startDate.setFullYear(endDate.getFullYear() - 1);
+  endDate.setFullYear(endDate.getFullYear() - 1);
+  endDate.setMonth(11, 31); // 31 de diciembre del año anterior
+  
+  const startDate = new Date(endDate);
+  startDate.setMonth(0, 1); // 1 de enero del año anterior
   
   const start = startDate.toISOString().split('T')[0];
   const end = endDate.toISOString().split('T')[0];
   
-  const url = `${OPEN_METEO_MARINE_URL}?latitude=${lat}&longitude=${lng}&daily=wave_height_max,wave_period_max,ocean_current_velocity&start_date=${start}&end_date=${end}`;
+  // Usar hourly para ocean_temperature (más preciso que daily)
+  const url = `${OPEN_METEO_MARINE_URL}?latitude=${lat}&longitude=${lng}&hourly=ocean_temperature&start_date=${start}&end_date=${end}`;
   
   try {
     const response = await download(url);
     const data = JSON.parse(response);
     
-    if (!data.daily) {
+    if (!data.hourly || !data.hourly.ocean_temperature) {
+      console.log('    No hay datos de temperatura disponibles para esta ubicación');
       return null;
     }
     
-    // Calcular promedios mensuales
+    // Calcular promedios mensuales desde datos horarios
     const meses = {};
-    for (let i = 0; i < data.daily.time.length; i++) {
-      const fecha = new Date(data.daily.time[i]);
-      const mes = fecha.getMonth() + 1;
+    for (let i = 0; i < data.hourly.time.length; i++) {
+      const temp = data.hourly.ocean_temperature[i];
+      if (temp === null || temp === undefined) {
+        continue;
+      }
+      
+      const fecha = new Date(data.hourly.time[i]);
+      const mes = fecha.getMonth() + 1; // 1-12
       
       if (!meses[mes]) {
         meses[mes] = { suma: 0, count: 0 };
       }
       
-      // Nota: Open-Meteo Marine no siempre tiene temperatura de agua de superficie
-      // Aquí usaríamos el parámetro correcto según documentación
-      const temp = data.daily.wave_height_max?.[i];
-      if (temp !== null && temp !== undefined) {
-        meses[mes].suma += temp;
-        meses[mes].count++;
+      meses[mes].suma += temp;
+      meses[mes].count++;
+    }
+    
+    // Calcular promedios y redondear a 1 decimal
+    const promediosMensuales = {};
+    for (const mes in meses) {
+      if (meses[mes].count > 0) {
+        promediosMensuales[mes] = Math.round(meses[mes].suma / meses[mes].count * 10) / 10;
       }
     }
     
-    const promediosMensuales = {};
-    for (const mes in meses) {
-      promediosMensuales[mes] = Math.round(meses[mes].suma / meses[mes].count * 10) / 10;
-    }
-    
-    return promediosMensuales;
+    return Object.keys(promediosMensuales).length > 0 ? promediosMensuales : null;
   } catch (error) {
     console.error(`  [ERROR] Open-Meteo: ${error.message}`);
     return null;

@@ -4,34 +4,91 @@
 import { readJSON, writeJSON, parseArgs, download, downloadBinary, normalizarNombrePlaya, campo } from './utils.mjs';
 import fs from 'fs';
 
-// URLs de la European Environment Agency para datos de calidad de agua
-const EEA_BATHING_WATER_URL = 'https://www.eea.europa.eu/data-and-maps/data/bathing-water-directive-status-of-bathing-water';
+// URL del endpoint de datos de la EEA (CSV descargable)
+// Usar el CSV más reciente disponible de bathing water quality
+const EEA_BATHING_WATER_CSV = 'https://www.eea.europa.eu/api/SITE/downloads/bathing-water-quality/bw-qual-assessments-2023.csv';
 
 /**
  * Descarga datos de calidad del agua de la EEA
- * La EEA proporciona archivos descargables (CSV, Excel, GeoJSON)
  */
 async function descargarCalidadAgua() {
-  console.log('\nDescargando datos de calidad del agua...');
-  console.log(`Fuente: European Environment Agency`);
-  console.log(`URL: ${EEA_BATHING_WATER_URL}`);
-  console.log('⚠️  Requiere verificar URL de descarga directa del dataset CSV/Excel');
-  console.log('    Alternativa: Náyade (MITECO) si ofrece descarga sin clave');
-  
-  // La EEA publica datos anuales de calidad del agua de baño
-  // Formato típico: CSV con columnas como:
-  // - Country, Region, Site name, Coordinates, Quality (Excellent/Good/Sufficient/Poor)
+  console.log('\nDescargando datos de calidad del agua desde EEA...');
+  console.log(`  URL: ${EEA_BATHING_WATER_CSV}`);
   
   try {
-    // Aquí iría la descarga real del CSV/Excel
-    // const data = await download('URL_DIRECTA_AL_CSV');
-    // return parsearDatosCalidad(data);
+    const csvData = await download(EEA_BATHING_WATER_CSV);
+    const playas = parsearCSVCalidadAgua(csvData);
     
-    return [];
+    console.log(`  ✓ ${playas.length} zonas de baño descargadas`);
+    
+    // Filtrar solo España
+    const playasEspana = playas.filter(p => 
+      p.country && p.country.toUpperCase() === 'SPAIN'
+    );
+    
+    console.log(`  ✓ ${playasEspana.length} zonas de baño de España`);
+    return playasEspana;
+    
   } catch (error) {
-    console.error(`Error: ${error.message}`);
-    return [];
+    console.error(`  [ERROR] ${error.message}`);
+    console.log('  ⚠️  Intentando URL alternativa o año anterior...');
+    
+    // Fallback: Probar año anterior
+    try {
+      const fallbackUrl = 'https://www.eea.europa.eu/api/SITE/downloads/bathing-water-quality/bw-qual-assessments-2022.csv';
+      console.log(`  Intentando: ${fallbackUrl}`);
+      const csvData = await download(fallbackUrl);
+      const playas = parsearCSVCalidadAgua(csvData);
+      const playasEspana = playas.filter(p => p.country?.toUpperCase() === 'SPAIN');
+      console.log(`  ✓ ${playasEspana.length} zonas de baño de España (2022)`);
+      return playasEspana;
+    } catch (fallbackError) {
+      console.error(`  [ERROR] Fallback también falló: ${fallbackError.message}`);
+      return [];
+    }
   }
+}
+
+/**
+ * Parsea CSV de calidad del agua de EEA
+ */
+function parsearCSVCalidadAgua(csvText) {
+  const lines = csvText.split('\n').filter(l => l.trim());
+  if (lines.length === 0) return [];
+  
+  const header = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+  const playas = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    // Parsear CSV respetando comillas
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let j = 0; j < lines[i].length; j++) {
+      const char = lines[i][j];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        values.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+    
+    if (values.length < header.length) continue;
+    
+    const playa = {};
+    header.forEach((key, idx) => {
+      playa[key.toLowerCase().replace(/[^a-z0-9]/g, '_')] = values[idx]?.replace(/^"|"$/g, '') || null;
+    });
+    
+    playas.push(playa);
+  }
+  
+  return playas;
 }
 
 /**
