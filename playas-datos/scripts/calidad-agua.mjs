@@ -10,43 +10,18 @@ const EEA_BATHING_WATER_CSV = 'https://www.eea.europa.eu/api/SITE/downloads/bath
 
 /**
  * Descarga datos de calidad del agua de la EEA
+ * NOTA 2026: La EEA cambió su estructura de datos y el CSV directo ya no está disponible.
+ * Se requiere acceso a la API Discodata o un nuevo endpoint que aún no hemos identificado.
  */
 async function descargarCalidadAgua() {
   console.log('\nDescargando datos de calidad del agua desde EEA...');
   console.log(`  URL: ${EEA_BATHING_WATER_CSV}`);
+  console.log('  ⚠️  FUENTE NO DISPONIBLE: La EEA ha movido/reestructurado sus datos de calidad de baño.');
+  console.log('  La URL del CSV directo retorna redirecciones HTML en lugar del CSV.');
+  console.log('  Se requiere investigar el nuevo endpoint de la API Discodata.');
+  console.log('  Por ahora, este campo se marca como "por confirmar".');
   
-  try {
-    const csvData = await download(EEA_BATHING_WATER_CSV);
-    const playas = parsearCSVCalidadAgua(csvData);
-    
-    console.log(`  ✓ ${playas.length} zonas de baño descargadas`);
-    
-    // Filtrar solo España
-    const playasEspana = playas.filter(p => 
-      p.country && p.country.toUpperCase() === 'SPAIN'
-    );
-    
-    console.log(`  ✓ ${playasEspana.length} zonas de baño de España`);
-    return playasEspana;
-    
-  } catch (error) {
-    console.error(`  [ERROR] ${error.message}`);
-    console.log('  ⚠️  Intentando URL alternativa o año anterior...');
-    
-    // Fallback: Probar año anterior
-    try {
-      const fallbackUrl = 'https://www.eea.europa.eu/api/SITE/downloads/bathing-water-quality/bw-qual-assessments-2022.csv';
-      console.log(`  Intentando: ${fallbackUrl}`);
-      const csvData = await download(fallbackUrl);
-      const playas = parsearCSVCalidadAgua(csvData);
-      const playasEspana = playas.filter(p => p.country?.toUpperCase() === 'SPAIN');
-      console.log(`  ✓ ${playasEspana.length} zonas de baño de España (2022)`);
-      return playasEspana;
-    } catch (fallbackError) {
-      console.error(`  [ERROR] Fallback también falló: ${fallbackError.message}`);
-      return [];
-    }
-  }
+  return [];
 }
 
 /**
@@ -124,9 +99,9 @@ function procesarPlaya(playa, dataset, coordsData) {
       slug: playa.slug,
       nombre: playa.nombre,
       municipio: playa.municipio,
-      calidad_2024: campo(null, null, null, null),
-      calidad_2025: campo(null, null, null, null),
-      apta_bano: campo(null, null, null, null)
+      calidad_2024: { valor: null, estado: 'por confirmar', razon: 'EEA API no disponible' },
+      calidad_2025: { valor: null, estado: 'por confirmar', razon: 'EEA API no disponible' },
+      apta_bano: { valor: null, estado: 'por confirmar', razon: 'EEA API no disponible' }
     };
   }
   

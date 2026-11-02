@@ -13,51 +13,18 @@ const CENSO_DOWNLOAD_URL = 'https://www.miteco.gob.es/content/dam/miteco/es/cart
 
 /**
  * Descarga y extrae el Censo de Aguas de Baño desde MITECO
+ * NOTA 2026: La URL directa del ZIP retorna HTTP 302 -> 404.
+ * El archivo ha sido movido o eliminado del servidor IDE de MITECO.
  */
 async function descargarCenso() {
   console.log('\nDescargando Censo de Zonas de Aguas de Baño...');
   console.log(`  Descargando desde: ${CENSO_DOWNLOAD_URL}`);
+  console.log('  ⚠️  FUENTE NO DISPONIBLE: HTTP 302 -> 404');
+  console.log('  El archivo censo_zonas_bano.zip no está disponible en el servidor MITECO.');
+  console.log('  Se requiere encontrar la nueva ubicación del dataset o usar fuente alternativa.');
+  console.log('  Por ahora, este campo se marca como "por confirmar".');
   
-  try {
-    // Descargar el ZIP
-    const zipBuffer = await downloadBinary(CENSO_DOWNLOAD_URL);
-    console.log(`  ✓ Descargado ZIP (${zipBuffer.length} bytes)`);
-    
-    // Extraer ZIP
-    const zip = new AdmZip(zipBuffer);
-    const zipEntries = zip.getEntries();
-    
-    // Buscar archivo .shp
-    const shpEntry = zipEntries.find(e => e.entryName.endsWith('.shp'));
-    const dbfEntry = zipEntries.find(e => e.entryName.endsWith('.dbf'));
-    
-    if (!shpEntry || !dbfEntry) {
-      console.log('  ⚠️  No se encontró archivo .shp o .dbf en el ZIP');
-      return [];
-    }
-    
-    console.log(`  ✓ Encontrado: ${shpEntry.entryName}`);
-    
-    // Extraer a temp
-    const tmpDir = '/tmp/censo_aguas';
-    if (!fs.existsSync(tmpDir)) {
-      fs.mkdirSync(tmpDir, { recursive: true });
-    }
-    zip.extractAllTo(tmpDir, true);
-    
-    const shpPath = `${tmpDir}/${shpEntry.entryName}`;
-    console.log(`  Convirtiendo SHP a GeoJSON...`);
-    
-    // Leer shapefile y convertir a array de features
-    const features = [];
-    const source = await readShapefile(shpPath);
-    
-    let result;
-    while (!(result = await source.read()).done) {
-      features.push(result.value);
-    }
-    
-    console.log(`  ✓ ${features.length} zonas de baño en el censo`);
+  return [];
     
     // Filtrar solo provincia de Alicante
     const alicante = features.filter(f => {

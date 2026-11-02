@@ -1,8 +1,1810 @@
 [
   {
+    "slug": "playa-de-tabarca",
+    "nombre": "Playa de Tabarca · Tabarca Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-primer-muntanyar",
+    "nombre": "Playa del Primer Muntanyar · Primer Muntanyar Beach",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-la-mosca",
+    "nombre": "Cala La Mosca",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "gran-playa",
+    "nombre": "Gran Playa",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-arenal",
+    "nombre": "Playa del Arenal · Arenal Beach",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-la-lombriz",
+    "nombre": "Cala de La Lombriz",
+    "municipio": "Pilar de la Horadada",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-zenia",
+    "nombre": "Playa de la Zenia · La Zenia Beach",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-blanca",
+    "nombre": "Cala Blanca",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-cerrada",
+    "nombre": "Cala Cerrada",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-segundo-muntanyar",
+    "nombre": "Playa del Segundo Muntanyar · Segundo Muntanyar Beach",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-mil-palmeras",
+    "nombre": "Playa de Mil Palmeras · Mil Palmeras Beach",
+    "municipio": "Pilar de la Horadada",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-mata",
+    "nombre": "Playa de La Mata · La Mata Beach",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-canina-de-orihuela-costa",
+    "nombre": "Playa canina de Orihuela Costa · Orihuela Costa Dog Beach",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-capitan",
+    "nombre": "Cala Capitán",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-grava",
+    "nombre": "Playa de la Grava · La Grava Beach",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-la-higuera",
+    "nombre": "Cala de la Higuera",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-las-higuericas",
+    "nombre": "Playa de las Higuericas · Las Higuericas Beach",
+    "municipio": "Pilar de la Horadada",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-cabo-roig",
+    "nombre": "Playa de Cabo Roig (La Caleta) · Cabo Roig Beach (La Caleta)",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-glea-campoamor",
+    "nombre": "Playa de La Glea (Campoamor) · La Glea Beach (Campoamor)",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-lisa",
+    "nombre": "Playa Lisa",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-la-granadella",
+    "nombre": "Cala de la Granadella",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-sardinera",
+    "nombre": "Cala Sardinera",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-faro",
+    "nombre": "Cala del Faro",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-les-platgetes",
+    "nombre": "Cala Les Platgetes",
+    "municipio": "Teulada-Moraira",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-punta-prima",
+    "nombre": "Playa de Punta Prima · Punta Prima Beach",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-mallaeta",
+    "nombre": "Cala Mallaeta",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-ampolla",
+    "nombre": "Playa de la Ampolla · La Ampolla Beach",
+    "municipio": "Teulada-Moraira",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-ferris",
+    "nombre": "Playa Ferris · Ferris Beach",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-el-portet",
+    "nombre": "Playa de El Portet · El Portet Beach",
+    "municipio": "Teulada-Moraira",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "calas-del-cuartel",
+    "nombre": "Calas del Cuartel",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-cura",
+    "nombre": "Playa del Cura · El Cura Beach",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-flamenca",
+    "nombre": "Playa Flamenca",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-rocio-del-mar",
+    "nombre": "Cala Rocío del Mar",
+    "municipio": "Orihuela Costa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-tango",
+    "nombre": "Cala Tangó",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-varadero",
+    "nombre": "Playa del Varadero (Santa Pola) · Varadero Beach (Santa Pola)",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-carritxal",
+    "nombre": "Cala del Carritxal",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-piteras",
+    "nombre": "Cala Piteras",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-portitxol",
+    "nombre": "Cala del Portitxol",
+    "municipio": "Xàbia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-tamarit",
+    "nombre": "Playa de Tamarit · Tamarit Beach",
+    "municipio": "Santa Pola",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-l-andrago",
+    "nombre": "Cala L'Andragó",
+    "municipio": "Teulada-Moraira",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-los-locos",
+    "nombre": "Playa de los Locos · Los Locos Beach",
+    "municipio": "Torrevieja",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-metge",
+    "nombre": "Cala del Metge",
+    "municipio": "L'Alfàs del Pi",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-coveta-fuma",
+    "nombre": "Cala Coveta Fumá",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-lanuza",
+    "nombre": "Cala Lanuza",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-los-tusales",
+    "nombre": "Playa de Los Tusales · Los Tusales Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-els-molins",
+    "nombre": "Playa de Els Molins · Els Molins Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-el-rebollo",
+    "nombre": "Playa de El Rebollo · El Rebollo Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-les-ortigues",
+    "nombre": "Playa de Les Ortigues · Les Ortigues Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-los-viveros",
+    "nombre": "Playa de Los Viveros · Los Viveros Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-moncayo",
+    "nombre": "Playa del Moncayo · El Moncayo Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-el-asparallo",
+    "nombre": "Playa de El Asparalló · El Asparalló Beach",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-la-caleta",
+    "nombre": "Cala La Caleta",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-llop-mari",
+    "nombre": "Cala del Llop Marí",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-calamar",
+    "nombre": "Playa del Calamar · Calamar Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-el-xarco",
+    "nombre": "Playa de El Xarco · El Xarco Beach",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-centro-de-villajoyosa",
+    "nombre": "Playa Centro de Villajoyosa · Villajoyosa Town Beach",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-marina",
+    "nombre": "Playa de la Marina · La Marina Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-aigua-dolc",
+    "nombre": "Cala de Aigua Dolç",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-cala-de-finestrat",
+    "nombre": "Playa de La Cala de Finestrat · La Cala de Finestrat Beach",
+    "municipio": "Finestrat",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-raco-del-conill",
+    "nombre": "Cala del Racó del Conill",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-baeza",
+    "nombre": "Cala Baeza",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-centro-de-guardamar",
+    "nombre": "Playa Centro de Guardamar · Guardamar Centro Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-albir",
+    "nombre": "Playa del Albir · Albir Beach",
+    "municipio": "L'Alfàs del Pi",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-el-pinet",
+    "nombre": "Playa de El Pinet · El Pinet Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-trajo",
+    "nombre": "Playa del Trajo · El Trajo Beach",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-les-deveses",
+    "nombre": "Playa de les Deveses · Les Deveses Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-arenales-del-sol",
+    "nombre": "Playa de Arenales del Sol · Arenales del Sol Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-roqueta",
+    "nombre": "Playa de La Roqueta · La Roqueta Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-les-palmeretes",
+    "nombre": "Cala de Les Palmeretes",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-les-llomes-de-reixes",
+    "nombre": "Playa de Les Llomes de Reixes · Les Llomes de Reixes Beach",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-banos-de-la-reina",
+    "nombre": "Playa Baños de la Reina · Baños de la Reina Beach",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-campo",
+    "nombre": "Playa del Campo · El Campo Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-varadero",
+    "nombre": "Playa del Varadero (Villajoyosa) · Varadero Beach (Villajoyosa)",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-carrer-la-mar",
+    "nombre": "Playa del Carrer la Mar · Carrer la Mar Beach",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-les-puntes-del-moro",
+    "nombre": "Cala de les Puntes del Moro",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-canina-de-el-campello",
+    "nombre": "Playa canina de El Campello · El Campello Dog Beach",
+    "municipio": "El Campello",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-els-tossals",
+    "nombre": "Playa de Els Tossals · Els Tossals Beach",
+    "municipio": "Guardamar del Segura",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-paraiso",
+    "nombre": "Playa del Paraíso · Paraíso Beach",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-les-bovetes",
+    "nombre": "Playa de Les Bovetes · Les Bovetes Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-moraig",
+    "nombre": "Cala Moraig",
+    "municipio": "El Poble Nou de Benitatxell",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-bol-nou",
+    "nombre": "Playa del Bol Nou · Bol Nou Beach",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-l-altet",
+    "nombre": "Playa de L'Altet · L'Altet Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-carabassi",
+    "nombre": "Playa del Carabassí · Carabassí Beach",
+    "municipio": "Elche",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-fonda",
+    "nombre": "Cala Fonda",
+    "municipio": "La Vila Joiosa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-levante",
+    "nombre": "Playa de Levante · Levante Beach",
+    "municipio": "Benidorm",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-pinets",
+    "nombre": "Cala Pinets",
+    "municipio": "Benissa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-mal-pas",
+    "nombre": "Cala del Mal Pas",
+    "municipio": "Benidorm",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-arenal-bol",
+    "nombre": "Playa del Arenal-Bol · Arenal-Bol Beach",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-canina-de-altea",
+    "nombre": "Playa canina de Altea · Altea Dog Beach",
+    "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
     "slug": "playa-del-espigo",
     "nombre": "Playa del Espigó · Espigó Beach",
     "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-la-palmera",
+    "nombre": "Cala de la Palmera",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-les-rotes",
+    "nombre": "Cala de Les Rotes",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-tio-ximo",
+    "nombre": "Cala Tío Ximo",
+    "municipio": "Benidorm",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-morello",
+    "nombre": "Cala del Morelló",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-san-gabriel",
+    "nombre": "Playa de San Gabriel · San Gabriel Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-urbanova",
+    "nombre": "Playa de Urbanova (Los Saladares) · Urbanova Beach (Los Saladares)",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-llobella",
+    "nombre": "Cala Llobella",
+    "municipio": "Benissa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-el-raco",
+    "nombre": "Cala El Racó",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-roda",
+    "nombre": "Playa de la Roda · La Roda Beach",
+    "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-cap-negret",
+    "nombre": "Playa del Cap Negret · Cap Negret Beach",
+    "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-puerto-blanco",
+    "nombre": "Playa Puerto Blanco · Puerto Blanco Beach",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "punta-negra",
+    "nombre": "Punta Negra",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-penyal",
+    "nombre": "Cala del Penyal",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-la-manzanera",
+    "nombre": "Cala La Manzanera",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-poniente",
+    "nombre": "Playa de Poniente · Poniente Beach",
+    "municipio": "Benidorm",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-la-calalga",
+    "nombre": "Cala La Calalga",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-coco",
+    "nombre": "Playa del Cocó · Cocó Beach",
+    "municipio": "Alicante",
     "calidad_2024": {
       "valor": null,
       "estado": "por confirmar"
@@ -51,6 +1853,57 @@
     }
   },
   {
+    "slug": "cala-barra-grande",
+    "nombre": "Cala Barra Grande",
+    "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-de-la-almadraba",
+    "nombre": "Cala de la Almadraba",
+    "municipio": "Benidorm",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-babel",
+    "nombre": "Playa de Babel · Babel Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
     "slug": "playa-de-san-juan",
     "nombre": "Playa de San Juan · San Juan Beach",
     "municipio": "Alicante",
@@ -68,9 +1921,230 @@
     }
   },
   {
+    "slug": "cala-la-calita",
+    "nombre": "Cala La Calita",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-cantalar",
+    "nombre": "Cala Cantalar",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-canina-de-agua-amarga",
+    "nombre": "Playa canina de Agua Amarga · Agua Amarga Dog Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-marineta-casiana",
+    "nombre": "Playa de la Marineta Casiana · La Marineta Casiana Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-albufereta",
+    "nombre": "Playa de la Albufereta · Albufereta Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-escollera-norte",
+    "nombre": "Playa de la Escollera Norte · La Escollera Norte Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-fustera",
+    "nombre": "Playa de la Fustera · La Fustera Beach",
+    "municipio": "Benissa",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
     "slug": "playa-de-la-solsida",
     "nombre": "Playa de la Solsida · La Solsida Beach",
     "municipio": "Altea",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-almadraba",
+    "nombre": "Playa de la Almadraba · Almadraba Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-les-marines",
+    "nombre": "Playa de Les Marines · Les Marines Beach",
+    "municipio": "Dénia",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-mallorqui",
+    "nombre": "Cala del Mallorquí",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-cantal-roig",
+    "nombre": "Playa del Cantal Roig · Cantal Roig Beach",
+    "municipio": "Calp",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-las-huertas",
+    "nombre": "Playa de las Huertas · Las Huertas Beach",
+    "municipio": "Alicante",
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-fossa",
+    "nombre": "Playa de la Fossa · La Fossa Beach",
+    "municipio": "Calp",
     "calidad_2024": {
       "valor": null,
       "estado": "por confirmar"

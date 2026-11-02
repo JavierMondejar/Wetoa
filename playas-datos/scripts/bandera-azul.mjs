@@ -5,69 +5,70 @@ import { readJSON, writeJSON, parseArgs, download, downloadBinary, normalizarNom
 import fs from 'fs';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const pdfParse = require('pdf-parse');
+const { PDFParse: pdf } = require('pdf-parse');
 
-// URL de ADEAC y fuente periodística con listado 2026
+// URL del PDF oficial de ADEAC 2026
 const BANDERA_AZUL_URL = 'https://www.banderaazul.org';
-const VALENCIA_BONITA_2026_URL = 'https://www.valenciabonita.es/2026/05/05/banderas-azules-comunitat-valenciana-2026/';
+const PDF_2026_URL = 'https://www.banderaazul.org/sites/default/files/2026/Rueda-de-prensa-2026/Relación%20Playas%20Galardonadas%202026.pdf';
 
 /**
- * Descarga listado 2026 desde artículo de prensa (Valencia Bonita)
+ * Descarga el PDF oficial de Banderas Azules 2026 de ADEAC
+ * NOTA 2026: El PDF oficial existe pero el parser ESM de pdf-parse tiene problemas de compatibilidad.
+ * La lista completa está disponible en el PDF; por ahora se marca como "por confirmar".
+ * Alternativa: parsear manualmente el PDF descargado o usar herramienta externa (pdftotext).
  */
 async function descargarBanderasAzules() {
   console.log('\nDescargando listado de Banderas Azules 2026...');
-  console.log(`  Fuente: ${VALENCIA_BONITA_2026_URL}`);
+  console.log(`  Fuente: ${PDF_2026_URL}`);
+  console.log('  ⚠️  Parser PDF no disponible en este entorno ESM.');
+  console.log('  El PDF oficial existe y puede descargarse manualmente.');
+  console.log('  Se requiere implementar parser alternativo o usar pdftotext CLI.');
+  console.log('  Por ahora, este campo se marca como "por confirmar".');
   
-  try {
-    const html = await download(VALENCIA_BONITA_2026_URL);
-    const playasAlicante = extraerPlayasHTML(html);
-    console.log(`  ✓ ${playasAlicante.length} playas con Bandera Azul 2026 en Alicante`);
-    return playasAlicante;
-  } catch (error) {
-    console.error(`  [ERROR] No se pudo descargar artículo: ${error.message}`);
-    return [];
-  }
+  return [];
 }
 
 /**
- * Extrae playas de Alicante del HTML del artículo
+ * Extrae playas de Alicante del texto del PDF oficial de ADEAC
  */
-function extraerPlayasHTML(html) {
+function extraerPlayasPDF(text) {
   const playas = [];
   
-  // Buscar sección de Alicante en el HTML
-  const alicanteSectionMatch = html.match(/ALICANTE[\s\S]*?(?=CASTELLÓN|$)/i);
+  // Buscar sección de Alicante en el PDF
+  const alicanteSectionMatch = text.match(/ALICANTE[\s\S]*?(?=ALMERÍA|ASTURIAS|BARCELONA|$)/i);
   if (!alicanteSectionMatch) {
-    console.log('  [WARN] No se encontró sección de Alicante en el artículo');
+    console.log('  [WARN] No se encontró sección de Alicante en el PDF');
     return [];
   }
   
   const alicateSection = alicanteSectionMatch[0];
   
-  // Extraer líneas con nombres de playas (típicamente en <li> o <p>)
-  const playaMatches = alicateSection.match(/<li[^>]*>([^<]+)<\/li>|<p[^>]*>([^<]+)<\/p>/gi) || [];
+  // Dividir en líneas y buscar nombres de playas
+  const lines = alicateSection.split('\n');
+  let currentMunicipio = null;
   
-  for (const match of playaMatches) {
-    // Quitar tags HTML
-    let texto = match.replace(/<[^>]+>/g, '').trim();
+  for (const line of lines) {
+    const trimmed = line.trim();
     
-    // Filtrar solo líneas que parecen nombres de playas
-    if (texto.match(/playa|platja|cala/i) && texto.length > 5 && texto.length < 150) {
-      // Extraer municipio si está entre paréntesis
-      const municipioMatch = texto.match(/\(([^)]+)\)/);
-      const municipio = municipioMatch ? municipioMatch[1].trim() : null;
+    // Detectar línea de municipio (en mayúsculas, sin números al inicio)
+    if (trimmed.match(/^[A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ\s']+$/) && trimmed.length > 3 && trimmed.length < 50) {
+      currentMunicipio = trimmed;
+      continue;
+    }
+    
+    // Detectar línea de playa (empieza con número o guión, contiene texto)
+    const playaMatch = trimmed.match(/^[\d\-\•\*\s]*(.+)$/);
+    if (playaMatch) {
+      let nombre = playaMatch[1].trim();
       
-      // Limpiar nombre
-      let nombre = texto
-        .replace(/\([^)]+\)/g, '') // Quitar municipio entre paréntesis
-        .replace(/^\d+[\.\-\s]*/, '') // Quitar números al inicio
-        .replace(/\s+/g, ' ')
-        .trim();
-      
-      if (nombre) {
+      // Filtrar líneas que claramente son nombres de playa
+      if ((nombre.match(/playa|platja|cala|beach/i) || (currentMunicipio && nombre.length > 3)) && 
+          nombre.length < 100 &&
+          !nombre.match(/^(municipio|provincia|total|página)/i)) {
+        
         playas.push({
           nombre,
-          municipio,
+          municipio: currentMunicipio,
           year: 2026
         });
       }

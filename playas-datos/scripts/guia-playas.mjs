@@ -11,58 +11,17 @@ const GUIA_PLAYAS_URL = `${CKAN_API_URL}/${GUIA_PLAYAS_DATASET_ID}`;
 
 /**
  * Descarga la Guía de Playas desde datos.gob.es usando CKAN API
+ * NOTA 2026: El dataset ea0018816-censo-de-playas en datos.gob.es retorna items vacíos.
+ * La API de distribuciones no funciona correctamente. MITECO tampoco ofrece descarga directa.
  */
 async function descargarGuiaPlayas() {
   console.log('\nDescargando Guía de Playas de España desde datos.gob.es...');
+  console.log('  ⚠️  FUENTE NO DISPONIBLE: El dataset CKAN retorna items vacíos.');
+  console.log('  La API de datos.gob.es no devuelve distribuciones descargables.');
+  console.log('  MITECO no publica descarga directa del Censo de Playas.');
+  console.log('  Este campo se marca como "por confirmar".');
   
-  try {
-    // 1. Obtener metadata del dataset para encontrar URL de descarga
-    const metadataUrl = `${CKAN_API_URL}/${GUIA_PLAYAS_DATASET_ID}`;
-    console.log(`  Consultando metadata: ${metadataUrl}`);
-    
-    const metadataResponse = await download(metadataUrl);
-    const metadata = JSON.parse(metadataResponse);
-    
-    // 2. Buscar recurso CSV o JSON
-    if (!metadata.result || !metadata.result.distribution) {
-      console.log('  ⚠️  No se encontraron distribuciones del dataset');
-      return [];
-    }
-    
-    const distributions = metadata.result.distribution;
-    const csvResource = distributions.find(d => 
-      d.format?.toUpperCase() === 'CSV' || 
-      d.mediaType === 'text/csv' ||
-      d.accessURL?.includes('.csv')
-    );
-    
-    if (!csvResource) {
-      console.log('  ⚠️  No se encontró recurso CSV en el dataset');
-      console.log(`  Formatos disponibles: ${distributions.map(d => d.format).join(', ')}`);
-      return [];
-    }
-    
-    const downloadUrl = csvResource.accessURL;
-    console.log(`  Descargando CSV desde: ${downloadUrl}`);
-    
-    // 3. Descargar y parsear CSV
-    const csvData = await download(downloadUrl);
-    const playas = parsearCSVGuiaPlayas(csvData);
-    
-    console.log(`  ✓ ${playas.length} playas descargadas`);
-    
-    // Filtrar solo provincia de Alicante
-    const playasAlicante = playas.filter(p => 
-      p.provincia && p.provincia.toLowerCase().includes('alicante')
-    );
-    
-    console.log(`  ✓ ${playasAlicante.length} playas de Alicante`);
-    return playasAlicante;
-    
-  } catch (error) {
-    console.error(`  [ERROR] ${error.message}`);
-    return [];
-  }
+  return [];
 }
 
 /**
