@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "playa-del-espigo",
+    "nombre": "Playa del Espigó · Espigó Beach",
+    "temperatura_agua_mensual": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-del-postiguet",
+    "nombre": "Playa del Postiguet · Postiguet Beach",
+    "temperatura_agua_mensual": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "cala-del-mascarat",
+    "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+    "temperatura_agua_mensual": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-san-juan",
+    "nombre": "Playa de San Juan · San Juan Beach",
+    "temperatura_agua_mensual": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  {
+    "slug": "playa-de-la-solsida",
+    "nombre": "Playa de la Solsida · La Solsida Beach",
+    "temperatura_agua_mensual": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  }
+]

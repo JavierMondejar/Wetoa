@@ -1,0 +1,22 @@
+{
+  "name": "playas-datos",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pipeline de datos para fichas de playas de Welcome to Alicante",
+  "scripts": {
+    "pilot": "node scripts/coordenadas.mjs --in data/beaches-master.json --out data/sources/coordenadas.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/guia-playas.mjs --in data/beaches-master.json --out data/sources/guia-playas.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/censo-aguas-bano.mjs --in data/beaches-master.json --out data/sources/censo-aguas-bano.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/calidad-agua.mjs --in data/beaches-master.json --out data/sources/calidad-agua.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/bandera-azul.mjs --in data/beaches-master.json --out data/sources/bandera-azul.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/osm-servicios.mjs --in data/beaches-master.json --out data/sources/osm-servicios.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/clima-agua.mjs --in data/beaches-master.json --out data/sources/clima-agua.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/cercanas.mjs --in data/beaches-master.json --out data/sources/cercanas.json --only playa-de-san-juan,playa-del-postiguet,playa-de-la-solsida,cala-del-mascarat,playa-del-espigo && node scripts/montar-fichas.mjs --in data/beaches-master.json"
+  },
+  "keywords": [
+    "beaches",
+    "alicante",
+    "data-pipeline"
+  ],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "pdf-parse": "^2.4.5",
+    "shapefile": "^0.6.6"
+  }
+}

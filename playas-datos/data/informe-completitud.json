@@ -1,0 +1,929 @@
+{
+  "fecha_generacion": "2026-11-02",
+  "total_playas": 127,
+  "resumen_por_playa": [
+    {
+      "slug": "playa-de-tabarca",
+      "nombre": "Playa de Tabarca · Tabarca Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-primer-muntanyar",
+      "nombre": "Playa del Primer Muntanyar · Primer Muntanyar Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-la-mosca",
+      "nombre": "Cala La Mosca",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "gran-playa",
+      "nombre": "Gran Playa",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-arenal",
+      "nombre": "Playa del Arenal · Arenal Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-la-lombriz",
+      "nombre": "Cala de La Lombriz",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-zenia",
+      "nombre": "Playa de la Zenia · La Zenia Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-blanca",
+      "nombre": "Cala Blanca",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-cerrada",
+      "nombre": "Cala Cerrada",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-segundo-muntanyar",
+      "nombre": "Playa del Segundo Muntanyar · Segundo Muntanyar Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-mil-palmeras",
+      "nombre": "Playa de Mil Palmeras · Mil Palmeras Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-mata",
+      "nombre": "Playa de La Mata · La Mata Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-canina-de-orihuela-costa",
+      "nombre": "Playa canina de Orihuela Costa · Orihuela Costa Dog Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-capitan",
+      "nombre": "Cala Capitán",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-grava",
+      "nombre": "Playa de la Grava · La Grava Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-la-higuera",
+      "nombre": "Cala de la Higuera",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-las-higuericas",
+      "nombre": "Playa de las Higuericas · Las Higuericas Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-cabo-roig",
+      "nombre": "Playa de Cabo Roig (La Caleta) · Cabo Roig Beach (La Caleta)",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-glea-campoamor",
+      "nombre": "Playa de La Glea (Campoamor) · La Glea Beach (Campoamor)",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-lisa",
+      "nombre": "Playa Lisa",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-la-granadella",
+      "nombre": "Cala de la Granadella",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-sardinera",
+      "nombre": "Cala Sardinera",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-faro",
+      "nombre": "Cala del Faro",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-les-platgetes",
+      "nombre": "Cala Les Platgetes",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-punta-prima",
+      "nombre": "Playa de Punta Prima · Punta Prima Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-mallaeta",
+      "nombre": "Cala Mallaeta",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-ampolla",
+      "nombre": "Playa de la Ampolla · La Ampolla Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-ferris",
+      "nombre": "Playa Ferris · Ferris Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-el-portet",
+      "nombre": "Playa de El Portet · El Portet Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "calas-del-cuartel",
+      "nombre": "Calas del Cuartel",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-cura",
+      "nombre": "Playa del Cura · El Cura Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-flamenca",
+      "nombre": "Playa Flamenca",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-rocio-del-mar",
+      "nombre": "Cala Rocío del Mar",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-tango",
+      "nombre": "Cala Tangó",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-varadero",
+      "nombre": "Playa del Varadero (Santa Pola) · Varadero Beach (Santa Pola)",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-carritxal",
+      "nombre": "Cala del Carritxal",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-piteras",
+      "nombre": "Cala Piteras",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-portitxol",
+      "nombre": "Cala del Portitxol",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-tamarit",
+      "nombre": "Playa de Tamarit · Tamarit Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-l-andrago",
+      "nombre": "Cala L'Andragó",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-los-locos",
+      "nombre": "Playa de los Locos · Los Locos Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-metge",
+      "nombre": "Cala del Metge",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-coveta-fuma",
+      "nombre": "Cala Coveta Fumá",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-lanuza",
+      "nombre": "Cala Lanuza",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-los-tusales",
+      "nombre": "Playa de Los Tusales · Los Tusales Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-els-molins",
+      "nombre": "Playa de Els Molins · Els Molins Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-el-rebollo",
+      "nombre": "Playa de El Rebollo · El Rebollo Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-les-ortigues",
+      "nombre": "Playa de Les Ortigues · Les Ortigues Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-los-viveros",
+      "nombre": "Playa de Los Viveros · Los Viveros Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-moncayo",
+      "nombre": "Playa del Moncayo · El Moncayo Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-el-asparallo",
+      "nombre": "Playa de El Asparalló · El Asparalló Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-la-caleta",
+      "nombre": "Cala La Caleta",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-llop-mari",
+      "nombre": "Cala del Llop Marí",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-calamar",
+      "nombre": "Playa del Calamar · Calamar Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-el-xarco",
+      "nombre": "Playa de El Xarco · El Xarco Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-centro-de-villajoyosa",
+      "nombre": "Playa Centro de Villajoyosa · Villajoyosa Town Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-marina",
+      "nombre": "Playa de la Marina · La Marina Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-aigua-dolc",
+      "nombre": "Cala de Aigua Dolç",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-cala-de-finestrat",
+      "nombre": "Playa de La Cala de Finestrat · La Cala de Finestrat Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-raco-del-conill",
+      "nombre": "Cala del Racó del Conill",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-baeza",
+      "nombre": "Cala Baeza",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-centro-de-guardamar",
+      "nombre": "Playa Centro de Guardamar · Guardamar Centro Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-albir",
+      "nombre": "Playa del Albir · Albir Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-el-pinet",
+      "nombre": "Playa de El Pinet · El Pinet Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-trajo",
+      "nombre": "Playa del Trajo · El Trajo Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-les-deveses",
+      "nombre": "Playa de les Deveses · Les Deveses Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-arenales-del-sol",
+      "nombre": "Playa de Arenales del Sol · Arenales del Sol Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-roqueta",
+      "nombre": "Playa de La Roqueta · La Roqueta Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-les-palmeretes",
+      "nombre": "Cala de Les Palmeretes",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-les-llomes-de-reixes",
+      "nombre": "Playa de Les Llomes de Reixes · Les Llomes de Reixes Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-banos-de-la-reina",
+      "nombre": "Playa Baños de la Reina · Baños de la Reina Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-campo",
+      "nombre": "Playa del Campo · El Campo Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-varadero",
+      "nombre": "Playa del Varadero (Villajoyosa) · Varadero Beach (Villajoyosa)",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-carrer-la-mar",
+      "nombre": "Playa del Carrer la Mar · Carrer la Mar Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-les-puntes-del-moro",
+      "nombre": "Cala de les Puntes del Moro",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-canina-de-el-campello",
+      "nombre": "Playa canina de El Campello · El Campello Dog Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-els-tossals",
+      "nombre": "Playa de Els Tossals · Els Tossals Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-paraiso",
+      "nombre": "Playa del Paraíso · Paraíso Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-les-bovetes",
+      "nombre": "Playa de Les Bovetes · Les Bovetes Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-moraig",
+      "nombre": "Cala Moraig",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-bol-nou",
+      "nombre": "Playa del Bol Nou · Bol Nou Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-l-altet",
+      "nombre": "Playa de L'Altet · L'Altet Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-carabassi",
+      "nombre": "Playa del Carabassí · Carabassí Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-fonda",
+      "nombre": "Cala Fonda",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-levante",
+      "nombre": "Playa de Levante · Levante Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-pinets",
+      "nombre": "Cala Pinets",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-mal-pas",
+      "nombre": "Cala del Mal Pas",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-arenal-bol",
+      "nombre": "Playa del Arenal-Bol · Arenal-Bol Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-canina-de-altea",
+      "nombre": "Playa canina de Altea · Altea Dog Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-espigo",
+      "nombre": "Playa del Espigó · Espigó Beach",
+      "campos_totales": 19,
+      "campos_completos": 1,
+      "completitud_porcentaje": 5
+    },
+    {
+      "slug": "cala-de-la-palmera",
+      "nombre": "Cala de la Palmera",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-les-rotes",
+      "nombre": "Cala de Les Rotes",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-tio-ximo",
+      "nombre": "Cala Tío Ximo",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-morello",
+      "nombre": "Cala del Morelló",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-san-gabriel",
+      "nombre": "Playa de San Gabriel · San Gabriel Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-urbanova",
+      "nombre": "Playa de Urbanova (Los Saladares) · Urbanova Beach (Los Saladares)",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-llobella",
+      "nombre": "Cala Llobella",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-el-raco",
+      "nombre": "Cala El Racó",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-roda",
+      "nombre": "Playa de la Roda · La Roda Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-cap-negret",
+      "nombre": "Playa del Cap Negret · Cap Negret Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-puerto-blanco",
+      "nombre": "Playa Puerto Blanco · Puerto Blanco Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "punta-negra",
+      "nombre": "Punta Negra",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-penyal",
+      "nombre": "Cala del Penyal",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-la-manzanera",
+      "nombre": "Cala La Manzanera",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-poniente",
+      "nombre": "Playa de Poniente · Poniente Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-la-calalga",
+      "nombre": "Cala La Calalga",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-coco",
+      "nombre": "Playa del Cocó · Cocó Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-postiguet",
+      "nombre": "Playa del Postiguet · Postiguet Beach",
+      "campos_totales": 19,
+      "campos_completos": 5,
+      "completitud_porcentaje": 26
+    },
+    {
+      "slug": "cala-del-mascarat",
+      "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+      "campos_totales": 19,
+      "campos_completos": 1,
+      "completitud_porcentaje": 5
+    },
+    {
+      "slug": "cala-barra-grande",
+      "nombre": "Cala Barra Grande",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-de-la-almadraba",
+      "nombre": "Cala de la Almadraba",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-babel",
+      "nombre": "Playa de Babel · Babel Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-san-juan",
+      "nombre": "Playa de San Juan · San Juan Beach",
+      "campos_totales": 19,
+      "campos_completos": 5,
+      "completitud_porcentaje": 26
+    },
+    {
+      "slug": "cala-la-calita",
+      "nombre": "Cala La Calita",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-cantalar",
+      "nombre": "Cala Cantalar",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-canina-de-agua-amarga",
+      "nombre": "Playa canina de Agua Amarga · Agua Amarga Dog Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-marineta-casiana",
+      "nombre": "Playa de la Marineta Casiana · La Marineta Casiana Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-albufereta",
+      "nombre": "Playa de la Albufereta · Albufereta Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-escollera-norte",
+      "nombre": "Playa de la Escollera Norte · La Escollera Norte Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-fustera",
+      "nombre": "Playa de la Fustera · La Fustera Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-solsida",
+      "nombre": "Playa de la Solsida · La Solsida Beach",
+      "campos_totales": 19,
+      "campos_completos": 5,
+      "completitud_porcentaje": 26
+    },
+    {
+      "slug": "playa-de-la-almadraba",
+      "nombre": "Playa de la Almadraba · Almadraba Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-les-marines",
+      "nombre": "Playa de Les Marines · Les Marines Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "cala-del-mallorqui",
+      "nombre": "Cala del Mallorquí",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-del-cantal-roig",
+      "nombre": "Playa del Cantal Roig · Cantal Roig Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-las-huertas",
+      "nombre": "Playa de las Huertas · Las Huertas Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    },
+    {
+      "slug": "playa-de-la-fossa",
+      "nombre": "Playa de la Fossa · La Fossa Beach",
+      "campos_totales": 0,
+      "campos_completos": 0,
+      "completitud_porcentaje": 0
+    }
+  ],
+  "resumen_por_fuente": {
+    "coordenadas": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 2
+    },
+    "guia-playas": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "censo-aguas-bano": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "calidad-agua": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "bandera-azul": {
+      "playas_con_datos": 127,
+      "cobertura_porcentaje": 100
+    },
+    "osm-servicios": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 2
+    },
+    "clima-agua": {
+      "playas_con_datos": 0,
+      "cobertura_porcentaje": 0
+    },
+    "cercanas": {
+      "playas_con_datos": 3,
+      "cobertura_porcentaje": 2
+    }
+  }
+}

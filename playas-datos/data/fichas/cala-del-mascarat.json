@@ -1,0 +1,102 @@
+{
+  "slug": "cala-del-mascarat",
+  "nombre": "Cala del Mascarat · Mascarat Beach (Cala del Mascarat)",
+  "municipio": "Altea",
+  "tipo": "ficha",
+  "urls": {
+    "es": "https://welcometoalicante.info/es/altea/playas/cala-del-mascarat/",
+    "en": "https://welcometoalicante.info/altea/beaches/mascarat-beach/"
+  },
+  "keyword_principal": "ES: cala del mascarat · EN: mascarat beach",
+  "notion_id": "40ce94a5-5148-818f-bf39-e0b614047998",
+  "coordenadas": {
+    "lat": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "lng": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "dimensiones": {
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "caracteristicas": {
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "censo_aguas_bano": {
+    "codigo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "calidad_agua": {
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "bandera_azul_2026": {
+    "valor": false,
+    "fuente": "ADEAC - Bandera Azul 2024",
+    "url": "https://www.banderaazul.org",
+    "fecha": "2026-11-02",
+    "metodo": "dataset",
+    "confianza": "alta"
+  },
+  "servicios": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "temperatura_agua": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "playas_cercanas": {
+    "valor": null,
+    "estado": "por confirmar"
+  }
+}

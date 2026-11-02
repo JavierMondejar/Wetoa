@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "playa-del-postiguet",
+    "nombre": "Playa del Postiguet · Postiguet Beach",
+    "municipio": "Alicante",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": "Fina dorada",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "ocupacion": {
+      "valor": "Muy alta",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "grado_urbanizacion": {
+      "valor": "Urbana",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "paseo_maritimo": {
+      "valor": "Sí",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "nudismo": {
+      "valor": "No",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": "Sí - Adaptada PMR",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    }
+  },
+  {
+    "slug": "playa-de-san-juan",
+    "nombre": "Playa de San Juan · San Juan Beach",
+    "municipio": "Alicante",
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_arena": {
+      "valor": "Fina dorada",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "ocupacion": {
+      "valor": "Alta",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "grado_urbanizacion": {
+      "valor": "Urbana",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "paseo_maritimo": {
+      "valor": "Sí",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "nudismo": {
+      "valor": "No",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    },
+    "bandera_azul": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": "Sí - Adaptada PMR",
+      "fuente": "Guía de Playas de España (MITECO)",
+      "url": "https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana",
+      "fecha": "2026-11-02",
+      "metodo": "dataset",
+      "confianza": "alta"
+    }
+  }
+]

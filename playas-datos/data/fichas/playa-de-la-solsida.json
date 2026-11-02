@@ -1,0 +1,139 @@
+{
+  "slug": "playa-de-la-solsida",
+  "nombre": "Playa de la Solsida · La Solsida Beach",
+  "municipio": "Altea",
+  "tipo": "ficha",
+  "urls": {
+    "es": "https://welcometoalicante.info/es/altea/playas/playa-de-la-solsida/",
+    "en": "https://welcometoalicante.info/altea/beaches/la-solsida-beach/"
+  },
+  "keyword_principal": "ES: playa de la solsida altea · EN: solsida beach",
+  "notion_id": "40ce94a5-5148-81d4-8762-d57b382bfc9d",
+  "coordenadas": {
+    "lat": {
+      "valor": 38.6268841,
+      "fuente": "Nominatim OSM",
+      "url": "https://nominatim.openstreetmap.org/ui/search.html?q=Playa%20de%20la%20Solsida%2C%20Altea%2C%20Alicante%2C%20Espa%C3%B1a",
+      "fecha": "2026-11-02",
+      "metodo": "api",
+      "confianza": "alta"
+    },
+    "lng": {
+      "valor": -0.0153897,
+      "fuente": "Nominatim OSM",
+      "url": "https://nominatim.openstreetmap.org/ui/search.html?q=Playa%20de%20la%20Solsida%2C%20Altea%2C%20Alicante%2C%20Espa%C3%B1a",
+      "fecha": "2026-11-02",
+      "metodo": "api",
+      "confianza": "alta"
+    }
+  },
+  "dimensiones": {
+    "longitud_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "anchura_m": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "caracteristicas": {
+    "tipo_arena": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "ocupacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "grado_urbanizacion": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "paseo_maritimo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "nudismo": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "accesibilidad": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "censo_aguas_bano": {
+    "codigo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "tipo_zona": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "calidad_agua": {
+    "calidad_2024": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "calidad_2025": {
+      "valor": null,
+      "estado": "por confirmar"
+    },
+    "apta_bano": {
+      "valor": null,
+      "estado": "por confirmar"
+    }
+  },
+  "bandera_azul_2026": {
+    "valor": false,
+    "fuente": "ADEAC - Bandera Azul 2024",
+    "url": "https://www.banderaazul.org",
+    "fecha": "2026-11-02",
+    "metodo": "dataset",
+    "confianza": "alta"
+  },
+  "servicios": {
+    "valor": {
+      "parkings": [],
+      "aseos": [],
+      "paradas_bus": []
+    },
+    "fuente": "OpenStreetMap via Overpass API",
+    "url": "https://www.openstreetmap.org/?mlat=38.6268841&mlon=-0.0153897&zoom=16",
+    "fecha": "2026-11-02",
+    "metodo": "api",
+    "confianza": "media"
+  },
+  "temperatura_agua": {
+    "valor": null,
+    "estado": "por confirmar"
+  },
+  "playas_cercanas": {
+    "valor": [
+      {
+        "slug": "playa-de-san-juan",
+        "nombre": "Playa de San Juan · San Juan Beach",
+        "municipio": "Alicante",
+        "distancia_km": 44.63,
+        "lat": 38.3703033,
+        "lng": -0.4097663
+      },
+      {
+        "slug": "playa-del-postiguet",
+        "nombre": "Playa del Postiguet · Postiguet Beach",
+        "municipio": "Alicante",
+        "distancia_km": 50.83,
+        "lat": 38.3462031,
+        "lng": -0.4763094
+      }
+    ],
+    "fuente": "Cálculo haversine",
+    "url": null,
+    "fecha": "2026-11-02",
+    "metodo": "calculo",
+    "confianza": "alta"
+  }
+}
