@@ -1,73 +1,15 @@
 # Pipeline de Datos para Playas de Alicante
 
-Pipeline automatizado para recopilar, procesar y enriquecer datos de playas de la provincia de Alicante para el sitio web Welcome to Alicante.
+Pipeline automatizado para recopilar datos verificables de playas de la provincia de Alicante para Welcome to Alicante.
 
-## 📋 Descripción
+## ✅ Principio Fundamental: Solo Datos Verificables
 
-Este pipeline combina múltiples fuentes de datos oficiales y públicas para generar fichas completas de playas, incluyendo:
+**CRÍTICO:** Cada valor debe venir de un archivo/página descargado en tiempo de ejecución, con su URL verificable. 
 
-- **Coordenadas geográficas** (Nominatim OSM)
-- **Características físicas** (Guía de Playas de España - MITECO)
-- **Calidad del agua** (European Environment Agency)
-- **Bandera Azul 2026** (ADEAC)
-- **Servicios cercanos** (OpenStreetMap)
-- **Temperatura del agua** (Open-Meteo Marine)
-- **Playas cercanas** (cálculo haversine)
+❌ **Prohibido:** Datos inventados o hardcodeados por el agente  
+✅ **Permitido:** Solo datos de fuentes descargables con URL de proveniencia
 
-## 🏗️ Arquitectura
-
-### Estructura de carpetas
-
-```
-playas-datos/
-├── data/
-│   ├── beaches-master.json      # Listado maestro de playas
-│   ├── sources/                 # Datos crudos por fuente
-│   │   ├── coordenadas.json
-│   │   ├── guia-playas.json
-│   │   ├── censo-aguas-bano.json
-│   │   ├── calidad-agua.json
-│   │   ├── bandera-azul.json
-│   │   ├── osm-servicios.json
-│   │   ├── clima-agua.json
-│   │   └── cercanas.json
-│   ├── fichas/                  # Fichas finales por playa
-│   │   ├── playa-de-san-juan.json
-│   │   └── ...
-│   ├── informe-completitud.json # Análisis de completitud
-│   ├── informe-completitud.md
-│   └── cruce-dudoso.json        # Cruces ambiguos (si hay)
-├── scripts/
-│   ├── utils.mjs                # Utilidades comunes
-│   ├── coordenadas.mjs
-│   ├── guia-playas.mjs
-│   ├── censo-aguas-bano.mjs
-│   ├── calidad-agua.mjs
-│   ├── bandera-azul.mjs
-│   ├── osm-servicios.mjs
-│   ├── clima-agua.mjs
-│   ├── cercanas.mjs
-│   └── montar-fichas.mjs
-└── package.json
-```
-
-### Proveniencia de datos
-
-**Cada campo incluye su proveniencia completa:**
-
-```json
-{
-  "valor": "...",
-  "fuente": "Nombre de la fuente",
-  "url": "URL de origen",
-  "fecha": "YYYY-MM-DD",
-  "metodo": "dataset|api|calculo",
-  "confianza": "alta|media|baja"
-}
-```
-
-**Campos sin datos:**
-
+Cuando una fuente falla:
 ```json
 {
   "valor": null,
@@ -75,198 +17,218 @@ playas-datos/
 }
 ```
 
+## 📊 Fuentes de Datos (Estado Actual)
+
+### 1. ✅ Coordenadas (Nominatim + Overpass OSM)
+- **URL:** https://nominatim.openstreetmap.org
+- **Método:** Búsqueda directa + fallback por área de municipio
+- **Política:** 1 req/s, User-Agent personalizado
+- **Variantes:** Búsqueda con nombres valencianos automáticos
+- **Estado:** Funcional, ~80% cobertura esperada
+
+### 2. ⚠️ Guía de Playas (MITECO - datos.gob.es)
+- **URL catálogo:** https://datos.gob.es/apidata/catalog/dataset/e0dat0002-guia-de-playas-de-espana
+- **Problema:** CKAN API no devuelve distribuciones en formato esperado
+- **Estado:** No funcional, requiere URL directa del CSV/JSON
+
+### 3. ✅ Censo de Aguas de Baño (MITECO)
+- **URL descarga:** https://www.miteco.gob.es/content/dam/miteco/es/cartografia-y-sig/ide/descargas/01-agua/censo_zonas_bano.zip
+- **Método:** Descarga ZIP, extracción SHP, conversión GeoJSON automática
+- **Filtro:** Provincia Alicante
+- **Estado:** Implementado, pendiente de prueba
+
+### 4. ⚠️ Calidad del Agua (EEA)
+- **URL:** https://www.eea.europa.eu/api/SITE/downloads/bathing-water-quality/bw-qual-assessments-2023.csv
+- **Problema:** Campo de país a identificar (countryCode 'ES' vs 'SPAIN')
+- **Estado:** CSV se descarga, filtro a corregir
+
+### 5. ⚠️ Bandera Azul 2026
+- **URL:** https://www.valenciabonita.es/2026/05/05/banderas-azules-comunitat-valenciana-2026/
+- **Método:** Scraping de artículo periodístico (mayo 2026)
+- **Confianza:** Media (fuente de prensa, no PDF oficial ADEAC)
+- **Estado:** Implementado, extracción HTML a refinar
+
+### 6. ⚠️ Servicios OSM (Overpass API)
+- **URLs:** overpass-api.de, overpass.kumi.systems, overpass.private.coffee
+- **Timeout:** 90s en query, 120s en HTTP
+- **Radio:** 300m (reducido para queries rápidas)
+- **Política:** 1 req/s, retry con backoff
+- **Estado:** Implementado, timeouts frecuentes en pruebas
+
+### 7. ⚠️ Temperatura del Agua (Open-Meteo Marine)
+- **URL:** https://marine-api.open-meteo.com/v1/marine
+- **Parámetro:** `sea_surface_temperature` (hourly)
+- **Problema:** Verificar disponibilidad de datos históricos
+- **Estado:** Parámetro corregido, pendiente prueba
+
+### 8. ✅ Playas Cercanas (Cálculo Haversine)
+- **Método:** Cálculo geométrico local
+- **Estado:** 100% funcional
+
+## 🏗️ Arquitectura
+
+```
+playas-datos/
+├── scripts/                    # 10 scripts ESM
+│   ├── utils.mjs              # Funciones comunes
+│   ├── coordenadas.mjs        # Nominatim + Overpass fallback
+│   ├── guia-playas.mjs        # CKAN API (no funciona aún)
+│   ├── censo-aguas-bano.mjs   # ZIP→SHP→GeoJSON automático
+│   ├── calidad-agua.mjs       # EEA CSV (campo país a corregir)
+│   ├── bandera-azul.mjs       # Scraping Valencia Bonita
+│   ├── osm-servicios.mjs      # Overpass con retry
+│   ├── clima-agua.mjs         # Open-Meteo Marine SST
+│   ├── cercanas.mjs           # Haversine
+│   └── montar-fichas.mjs      # Combina todas las fuentes
+├── data/
+│   ├── beaches-master.json    # 127 playas desde Notion
+│   ├── sources/               # Datos por fuente (generados)
+│   ├── fichas/                # Fichas finales (generadas)
+│   └── informe-completitud.md # Reporte automático
+├── package.json               # Dependencias: shapefile, pdf-parse, adm-zip
+└── .gitignore                 # Excluye: node_modules, data/raw, cache, *.zip, *.shp
+
+```
+
 ## 🚀 Uso
 
-### Instalación
-
-No se requieren dependencias externas. El pipeline usa solo módulos nativos de Node.js.
+### Ejecución Local
 
 ```bash
 cd playas-datos
-```
+npm install  # Solo primera vez
 
-### Ejecutar pipeline piloto
-
-Procesa las 5 playas piloto:
-
-```bash
+# Piloto (5 playas)
 npm run pilot
+
+# Script individual
+node scripts/coordenadas.mjs \
+  --in data/beaches-master.json \
+  --out data/sources/coordenadas.json \
+  --only playa-de-san-juan,playa-del-postiguet
+
+# Todas las playas
+node scripts/coordenadas.mjs \
+  --in data/beaches-master.json \
+  --out data/sources/coordenadas.json
 ```
 
-### Ejecutar scripts individuales
-
-Cada script sigue el mismo patrón CLI:
+### Variables de Entorno
 
 ```bash
-node scripts/{script}.mjs --in data/beaches-master.json --out data/sources/{output}.json [--only slug1,slug2,...]
-```
-
-**Ejemplos:**
-
-```bash
-# Obtener coordenadas de todas las playas
-node scripts/coordenadas.mjs --in data/beaches-master.json --out data/sources/coordenadas.json
-
-# Procesar solo 2 playas específicas
-node scripts/guia-playas.mjs --in data/beaches-master.json --out data/sources/guia-playas.json --only playa-de-san-juan,playa-del-postiguet
-
-# Montar fichas finales
-node scripts/montar-fichas.mjs --in data/beaches-master.json
-```
-
-### Variables de entorno
-
-**Deshabilitar módulos opcionales:**
-
-```bash
-# Deshabilitar Nominatim (OSM)
+# Deshabilitar módulos opcionales
 ENABLE_NOMINATIM=false node scripts/coordenadas.mjs ...
-
-# Deshabilitar consultas OSM Overpass
 ENABLE_OSM=false node scripts/osm-servicios.mjs ...
-
-# Deshabilitar Open-Meteo
 ENABLE_OPEN_METEO=false node scripts/clima-agua.mjs ...
 ```
 
-## 📚 Fuentes de Datos
+## 📦 Sistema de Proveniencia
 
-### 1. Coordenadas (`coordenadas.mjs`)
+Cada campo incluye su origen completo:
 
-- **Fuente principal:** [Nominatim OSM](https://nominatim.openstreetmap.org/)
-- **Método:** API de geocodificación
-- **Política de uso:** 1 solicitud/segundo, User-Agent personalizado
-- **Fallback:** Datasets oficiales (Guía de Playas, Censo Aguas de Baño)
-
-### 2. Guía de Playas (`guia-playas.mjs`)
-
-- **Fuente:** [Guía de Playas de España (MITECO)](https://datos.gob.es/en/catalogo/e0dat0002-guia-de-playas-de-espana)
-- **Campos:** longitud, anchura, tipo de arena, ocupación, urbanización, paseo marítimo, nudismo, accesibilidad
-- **Estado:** ⚠️ Requiere verificación manual de URL de descarga directa y formato actual
-
-### 3. Censo de Aguas de Baño (`censo-aguas-bano.mjs`)
-
-- **Fuente:** [Censo de Zonas de Aguas de Baño (MITECO)](https://www.miteco.gob.es/fr/cartografia-y-sig/ide/descargas/agua/censo-aguas-bano.html)
-- **Formatos disponibles:** SHP, GML, KMZ, GeoPackage
-- **Estado:** ⚠️ Requiere descarga manual y conversión a GeoJSON (herramienta sugerida: `ogr2ogr`)
-
-### 4. Calidad del Agua (`calidad-agua.mjs`)
-
-- **Fuente:** [European Environment Agency - Bathing Water Quality](https://www.eea.europa.eu/data-and-maps/data/bathing-water-directive-status-of-bathing-water)
-- **Alternativa:** Náyade (MITECO) si ofrece descarga sin clave
-- **Campos:** calidad 2024/2025 (Excellent/Good/Sufficient/Poor), apta para baño
-- **Estado:** ⚠️ Requiere verificación de URL de descarga CSV/Excel
-
-### 5. Bandera Azul (`bandera-azul.mjs`)
-
-- **Fuente:** [ADEAC - Bandera Azul](https://www.banderaazul.org)
-- **Método:** Extracción de listado 2026 (PDF o página web)
-- **Estado:** ⚠️ Requiere extracción manual o scraping
-
-### 6. Servicios OSM (`osm-servicios.mjs`)
-
-- **Fuente:** [OpenStreetMap via Overpass API](https://overpass-api.de/)
-- **Radio:** 500 metros
-- **Servicios:** parkings, aseos, paradas de autobús, información turística
-- **Política de uso:** 1 solicitud/segundo, User-Agent personalizado
-- **Opcional:** Puede deshabilitarse con `ENABLE_OSM=false`
-
-### 7. Clima del Agua (`clima-agua.mjs`)
-
-- **Fuente:** [Open-Meteo Marine API](https://marine-api.open-meteo.com/)
-- **Datos:** Promedios mensuales de temperatura del agua (último año)
-- **Opcional:** Puede deshabilitarse con `ENABLE_OPEN_METEO=false`
-- **Estado:** ⚠️ Verificar disponibilidad de parámetros de temperatura de agua de superficie
-
-### 8. Playas Cercanas (`cercanas.mjs`)
-
-- **Método:** Cálculo de distancia haversine
-- **Salida:** 3 playas más cercanas con distancia en km
-- **Dependencia:** Requiere datos de `coordenadas.json`
-
-### 9. Montar Fichas (`montar-fichas.mjs`)
-
-- **Función:** Combina todas las fuentes en fichas individuales por playa
-- **Salidas:**
-  - `data/fichas/{slug}.json` - Ficha completa de cada playa
-  - `data/informe-completitud.json` - Análisis de completitud
-  - `data/informe-completitud.md` - Informe legible
-  - `data/cruce-dudoso.json` - Cruces ambiguos (si los hay)
-
-## 🤖 Automatización con GitHub Actions
-
-El pipeline puede ejecutarse desde GitHub Actions de forma manual:
-
-```yaml
-# .github/workflows/actualizar-playas.yml
+```json
+{
+  "tipo_arena": {
+    "valor": "Fina dorada",
+    "fuente": "Guía de Playas de España (MITECO)",
+    "url": "https://datos.gob.es/...",
+    "fecha": "2026-11-02",
+    "metodo": "dataset",
+    "confianza": "alta"
+  }
+}
 ```
 
-**Uso:**
+Campos sin datos verificables:
 
-1. Ir a "Actions" en GitHub
-2. Seleccionar "Actualizar Datos de Playas"
-3. Click en "Run workflow"
-4. Elegir playas (slugs separados por comas) o "all"
-5. El workflow descarga datos, procesa y hace commit automático
+```json
+{
+  "longitud_m": {
+    "valor": null,
+    "estado": "por confirmar"
+  }
+}
+```
 
 ## ⚠️ Limitaciones Conocidas
 
-### Datasets que requieren intervención manual
+### No Resueltas (Requieren intervención)
 
-1. **Guía de Playas (MITECO):** URL de descarga directa debe verificarse en datos.gob.es
-2. **Censo Aguas de Baño:** Requiere conversión de SHP/GeoPackage a GeoJSON
-3. **Calidad del Agua:** URL de descarga de CSV/Excel debe verificarse en EEA
-4. **Bandera Azul:** Listado 2026 debe extraerse de PDF o scraping
+1. **Guía de Playas (MITECO)**
+   - CKAN API devuelve estructura inesperada
+   - Requiere URL directa del CSV descargable
+   - Verificar manualmente en datos.gob.es
 
-### Posibles bloqueos desde IPs cloud
+2. **Calidad del Agua (EEA)**
+   - CSV se descarga pero filtro por país falla
+   - Identificar campo correcto: `countryCode`, `country_code`, etc.
+   - Posibles valores: 'ES', 'SPAIN', 'Spain', 'ESP'
 
-Algunos sitios gubernamentales pueden bloquear o ralentizar solicitudes desde IPs de cloud. Si un script falla:
+3. **Overpass API**
+   - Timeouts frecuentes incluso con 90s
+   - Posible bloqueo desde IPs cloud
+   - Considerar deshabilitar o queries aún más simples
 
-- Verificar el código de estado HTTP en el error
-- Probar descarga manual desde navegador
-- Buscar mirrors alternativos oficiales
-- Documentar el fallo en el informe
+4. **Open-Meteo Marine**
+   - Parámetro `sea_surface_temperature` corregido
+   - Verificar si datos históricos disponibles
+   - Si no, reportar y dejar campo en null
 
-### Políticas de uso de APIs
+5. **Bandera Azul**
+   - Extracción HTML de Valencia Bonita implementada
+   - Requiere refinar regex de extracción
+   - Confianza media (fuente periodística, no oficial)
 
-- **Nominatim OSM:** Máximo 1 req/s, User-Agent obligatorio
-- **Overpass API:** Máximo 1 req/s, User-Agent obligatorio
-- **Open-Meteo:** Sin límites de rate, pero uso razonable recomendado
+## 📝 Desarrollo
 
-## 📄 Licencias y Atribución
+### Añadir Nueva Fuente
 
-Todas las fuentes de datos son públicas y abiertas:
-
-- **OpenStreetMap:** © OpenStreetMap contributors, [ODbL](https://opendatacommons.org/licenses/odbl/)
-- **MITECO (Guía de Playas, Censo):** Datos abiertos del Gobierno de España
-- **EEA (Calidad del Agua):** Datos abiertos de la Agencia Europea de Medio Ambiente
-- **Open-Meteo:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **ADEAC (Bandera Azul):** Datos públicos
-
-Este repositorio es **público** y no contiene secretos, claves API ni datos personales.
-
-## 🔧 Desarrollo
-
-### Añadir una nueva fuente
-
-1. Crear `scripts/nueva-fuente.mjs` siguiendo el patrón CLI
-2. Implementar función de descarga/procesamiento
-3. Usar `campo()` de `utils.mjs` para crear campos con proveniencia
-4. Actualizar `montar-fichas.mjs` para integrar los nuevos campos
-5. Añadir al script `pilot` en `package.json`
-6. Documentar en este README
+1. Crear `scripts/nueva-fuente.mjs` con patrón CLI estándar
+2. Descargar desde URL pública sin autenticación
+3. Usar `campo()` de utils.mjs para todos los valores
+4. Documentar URL, método y limitaciones en README
+5. Actualizar `montar-fichas.mjs` para integrar campos
+6. Añadir a `npm run pilot`
 
 ### Testing
 
-Usar el flag `--only` para probar con 1-2 playas antes de ejecutar el pipeline completo:
+Probar con 1-2 playas antes del lote completo:
 
 ```bash
-node scripts/coordenadas.mjs --in data/beaches-master.json --out data/sources/coordenadas.json --only playa-de-san-juan
+node scripts/coordenadas.mjs \
+  --in data/beaches-master.json \
+  --out data/sources/coordenadas.json \
+  --only playa-de-san-juan
 ```
 
-## 📞 Contacto
+## 📄 Licencias y Atribución
 
-Para dudas sobre el pipeline: [GitHub Issues](../../issues)
+- **OpenStreetMap:** © OpenStreetMap contributors, ODbL
+- **MITECO (Guía Playas, Censo):** Datos abiertos Gobierno España
+- **EEA:** Datos abiertos Agencia Europea Medio Ambiente
+- **Open-Meteo:** CC BY 4.0
+- **Valencia Bonita:** Artículo periodístico citado con URL
+
+## 🔧 Troubleshooting
+
+**Timeout en Overpass:**
+- Aumentar timeout en utils.mjs (actual: 120s)
+- Reducir radio de búsqueda (actual: 300m)
+- Simplificar queries (menos tipos de servicios por llamada)
+
+**CKAN API sin resultados:**
+- Verificar estructura de respuesta con curl
+- Buscar URL alternativa en portal datos.gob.es
+- Considerar scraping directo del portal
+
+**Censo ZIP no se extrae:**
+- Verificar que adm-zip y shapefile están instalados
+- Revisar permisos de /tmp/censo_aguas
+- Inspeccionar contenido del ZIP manualmente
+
+## 📞 Soporte
+
+Para issues técnicos: [GitHub Issues](../../issues)
 
 ---
 
